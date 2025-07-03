@@ -1,0 +1,6 @@
+@use './colors' as *;
+@use './reset' as *;
+
+body {
+	font-family: var(--font-montserrat), sans-serif;
+}
