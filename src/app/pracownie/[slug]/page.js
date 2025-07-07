@@ -5,26 +5,26 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Workshop.module.scss';
 
-export default function WorkshopPage() {
+export default function DepartmentPage() {
 	const params = useParams();
 	const slug = params.slug;
 
-	const workshopsData = {
+	const departmentsData = {
 		stolarnia: {
-			title: 'Pracownia Stolarska',
+			title: 'Dział Stolarski',
 			subtitle: 'Tradycyjne rzemiosło w nowoczesnym wykonaniu',
 			description:
-				'Nasza pracownia stolarska to miejsce, gdzie tradycyjne techniki obróbki drewna spotykają się z nowoczesnymi narzędziami. Uczestnicy uczą się tworzenia pięknych i funkcjonalnych mebli oraz przedmiotów z drewna.',
+				'Nasz dział stolarski to serce produkcji, gdzie tradycyjne techniki obróbki drewna spotykają się z nowoczesnymi technologiami. Tworzymy unikalne produkty z drewna, łącząc doświadczenie z innowacją.',
 			image: '/pracownie/stolarnia/main.jpg',
 			bgColor: 'linear-gradient(135deg, #8B4513 0%, #D2691E 100%)',
 			icon: '🪵',
-			skills: [
-				'Podstawy obróbki drewna',
-				'Używanie narzędzi ręcznych i elektrycznych',
-				'Techniki łączenia drewna',
-				'Wykańczanie powierzchni',
-				'Projektowanie mebli',
-				'Konserwacja i naprawa',
+			capabilities: [
+				'Precyzyjna obróbka drewna',
+				'Nowoczesne maszyny CNC',
+				'Tradycyjne techniki łączenia',
+				'Profesjonalne wykańczanie powierzchni',
+				'Projektowanie na zamówienie',
+				'Kontrola jakości na każdym etapie',
 			],
 			projects: [
 				{
@@ -46,29 +46,28 @@ export default function WorkshopPage() {
 					image: '/pracownie/stolarnia/product3.jpg',
 				},
 			],
-			schedule: { monday: '8:00 - 14:00', tuesday: '8:00 - 14:00', wednesday: '8:00 - 14:00', thursday: '8:00 - 14:00', friday: '8:00 - 12:00' },
-			instructor: {
-				name: 'Mistrz Jan Kowalski',
-				experience: '25 lat doświadczenia',
-				description: 'Doświadczony stolarz z wieloletnim stażem w zawodzie. Specjalizuje się w meblach na zamówienie i konserwacji zabytków.',
-				avatar: '/instructors/jan-kowalski.jpg',
+			team: {
+				size: '8 specjalistów',
+				experience: 'Średnio 15 lat doświadczenia',
+				specialization: 'Obróbka drewna i wykończenia',
 			},
+			equipment: ['Frezarki CNC', 'Piły tarczowe profesjonalne', 'Strugarki i grubościówki', 'Kabina lakiernicza', 'Narzędzia precyzyjne'],
 		},
 		artystyczna: {
-			title: 'Pracownia Artystyczna',
-			subtitle: 'Uwolnij swoją kreatywność',
+			title: 'Dział Artystyczny',
+			subtitle: 'Kreatywność w każdym detalu',
 			description:
-				'Pracownia artystyczna to przestrzeń twórcza, gdzie uczestnicy mogą rozwijać swoje talenty plastyczne poprzez różnorodne techniki i materiały.',
+				'Nasz dział artystyczny to miejsce, gdzie pomysły nabierają kształtu. Specjalizujemy się w tworzeniu unikalnych produktów ręcznie robionych, które łączą funkcjonalność z estetyką.',
 			image: '/pracownie/rękodzieło/main.jpg',
 			bgColor: 'linear-gradient(135deg, #9B59B6 0%, #E74C3C 100%)',
 			icon: '🎨',
-			skills: [
-				'Podstawy rysunku i malarstwa',
-				'Prace w glinie i ceramice',
-				'Techniki graficzne',
-				'Kompozycja i teoria kolorów',
-				'Rzeźbienie',
-				'Tworzenie instalacji artystycznych',
+			capabilities: [
+				'Projektowanie autorskie',
+				'Ręczne techniki wykonania',
+				'Praca z różnymi materiałami',
+				'Indywidualne podejście do zamówień',
+				'Dekoracje tematyczne',
+				'Produkty sezonowe',
 			],
 			projects: [
 				{
@@ -90,24 +89,29 @@ export default function WorkshopPage() {
 					image: '/pracownie/rękodzieło/product3.jpg',
 				},
 			],
-			schedule: { monday: '9:00 - 15:00', tuesday: '9:00 - 15:00', wednesday: '9:00 - 15:00', thursday: '9:00 - 15:00', friday: '9:00 - 13:00' },
-			instructor: {
-				name: 'Mgr Anna Nowak',
-				experience: '15 lat doświadczenia',
-				description:
-					'Absolwentka Akademii Sztuk Pięknych, specjalizująca się w malarstwie i ceramice. Prowadzi również warsztaty terapii przez sztukę.',
-				avatar: '/instructors/anna-nowak.jpg',
+			team: {
+				size: '5 artystów',
+				experience: 'Średnio 12 lat doświadczenia',
+				specialization: 'Rękodzieło i dekoracje',
 			},
+			equipment: ['Stanowiska do plecenia', 'Narzędzia precyzyjne', 'Materiały premium', 'Stacja pakowania', 'Kontrola jakości'],
 		},
 		szwalnia: {
-			title: 'Pracownia Szwalnicza',
-			subtitle: 'Sztuka tworzenia z tkanin',
+			title: 'Dział Tekstylny',
+			subtitle: 'Precyzja w każdym ściegu',
 			description:
-				'Pracownia krawiecka uczy szycia, napraw odzieży oraz tworzenia produktów tekstylnych. Rozwijamy umiejętności manualne i kreatywność.',
+				'Nasz dział tekstylny to centrum produkcji wysokiej jakości wyrobów z tkanin. Wykorzystujemy nowoczesne maszyny oraz tradycyjne techniki krawieckie do tworzenia funkcjonalnych i estetycznych produktów.',
 			image: '/pracownie/szwalnia.jpg',
 			bgColor: 'linear-gradient(135deg, #3498DB 0%, #2C3E50 100%)',
 			icon: '🧵',
-			skills: ['Podstawy szycia', 'Naprawa odzieży', 'Wzornictwo tekstylne', 'Obsługa maszyn', 'Haft i wykończenia', 'Projektowanie ubrań'],
+			capabilities: [
+				'Szycie maszynowe i ręczne',
+				'Projektowanie wzorów',
+				'Obróbka różnych tkanin',
+				'Profesjonalne wykończenia',
+				'Produkcja seryjna i jednostkowa',
+				'Kontrola jakości szwów',
+			],
 			projects: [
 				{
 					name: 'Legowiska dla psów i kotów',
@@ -128,27 +132,34 @@ export default function WorkshopPage() {
 					image: '/pracownie/szwalnia/product3.jpg',
 				},
 			],
-			schedule: { monday: '8:00 - 14:00', tuesday: '8:00 - 14:00', wednesday: '8:00 - 14:00', thursday: '8:00 - 14:00', friday: '8:00 - 12:00' },
-			instructor: {
-				name: 'Mgr Maria Krawczyk',
-				experience: '20 lat doświadczenia',
-				description: 'Specjalistka w dziedzinie szycia i wzornictwa tekstylnego.',
-				avatar: '/instructors/maria-krawczyk.jpg',
+			team: {
+				size: '6 krawców',
+				experience: 'Średnio 18 lat doświadczenia',
+				specialization: 'Tekstylia i akcesoria',
 			},
+			equipment: ['Maszyny do szycia przemysłowe', 'Overlocki i rozpinacze', 'Prasy do prasowania', 'Stoły krawieckie', 'Narzędzia pomiarowe'],
 		},
 		informatyczna: {
-			title: 'Pracownia Informatyczna',
-			subtitle: 'Technologie przyszłości',
-			description: 'Pracownia komputerowa oferuje naukę obsługi komputera, podstaw programowania i aplikacji biurowych.',
+			title: 'Dział Technologii',
+			subtitle: 'Innowacyjne rozwiązania produkcyjne',
+			description:
+				'Nasz dział technologii odpowiada za precyzyjne wycinanie i grawerowanie przy użyciu najnowocześniejszych maszyn CNC. Realizujemy projekty wymagające najwyższej precyzji.',
 			image: '/pracownie/informatyczna.jpg',
 			bgColor: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
 			icon: '💻',
-			skills: ['Obsługa komputera', 'Microsoft Office', 'Podstawy programowania', 'Internet i email', 'Grafika komputerowa', 'Bazy danych'],
+			capabilities: [
+				'Wycinanie laserowe CNC',
+				'Grawerowanie precyzyjne',
+				'Projektowanie CAD/CAM',
+				'Obróbka różnych materiałów',
+				'Prototypowanie',
+				'Produkcja seryjna',
+			],
 			projects: [
 				{
 					name: 'Wycinanie laserowe CNC',
 					description:
-						'NOferujemy profesjonalne usługi wycinania laserowego CNC z szerokiej gamy materiałów – takich jak sklejka, drewno, akryl oraz inne tworzywa. Dzięki nowoczesnej technologii jesteśmy w stanie realizować zarówno proste, jak i bardzo precyzyjne, ozdobne projekty – od pojedynczych elementów po większe serie produkcyjne',
+						'Oferujemy profesjonalne usługi wycinania laserowego CNC z szerokiej gamy materiałów – takich jak sklejka, drewno, akryl oraz inne tworzywa. Dzięki nowoczesnej technologii jesteśmy w stanie realizować zarówno proste, jak i bardzo precyzyjne, ozdobne projekty – od pojedynczych elementów po większe serie produkcyjne',
 					image: '/pracownie/informatyka/product1.jpg',
 				},
 				{
@@ -164,22 +175,29 @@ export default function WorkshopPage() {
 					image: '/pracownie/informatyka/product3.jpg',
 				},
 			],
-			schedule: { monday: '9:00 - 15:00', tuesday: '9:00 - 15:00', wednesday: '9:00 - 15:00', thursday: '9:00 - 15:00', friday: '9:00 - 13:00' },
-			instructor: {
-				name: 'Mgr inż. Piotr Tech',
-				experience: '12 lat doświadczenia',
-				description: 'Programista i nauczyciel technologii informatycznych.',
-				avatar: '/instructors/piotr-tech.jpg',
+			team: {
+				size: '4 operatorów',
+				experience: 'Średnio 8 lat doświadczenia',
+				specialization: 'Technologie CNC i CAD',
 			},
+			equipment: ['Plotery laserowe CNC', 'Oprogramowanie CAD/CAM', 'Stacje projektowe', 'Systemy kontroli jakości', 'Narzędzia pomiarowe'],
 		},
 		sprzatajaca: {
-			title: 'Pracownia Usług Porządkowych',
-			subtitle: 'Profesjonalne sprzątanie',
-			description: 'Pracownia usług porządkowych kształci umiejętności sprzątania i utrzymania czystości w różnych obiektach.',
+			title: 'Dział Utrzymania Czystości',
+			subtitle: 'Profesjonalne standardy czystości',
+			description:
+				'Nasz dział utrzymania czystości dba o najwyższe standardy higieny we wszystkich obszarach firmy. Zapewniamy odpowiednie warunki pracy oraz przedstawiamy firmę w najlepszym świetle.',
 			image: '/pracownie/sprzatajaca.jpg',
 			bgColor: 'linear-gradient(135deg, #27AE60 0%, #2ECC71 100%)',
 			icon: '🧹',
-			skills: ['Techniki sprzątania', 'Użycie środków chemicznych', 'Organizacja pracy', 'Bezpieczeństwo pracy', 'Obsługa sprzętu', 'Ekologia'],
+			capabilities: [
+				'Kompleksowe sprzątanie obiektów',
+				'Nowoczesne środki chemiczne',
+				'Profesjonalny sprzęt',
+				'Standardy bezpieczeństwa',
+				'Ekologiczne rozwiązania',
+				'Utrzymanie porządku',
+			],
 			projects: [
 				{
 					name: 'Drewniane budki lęgowe dla ptaków',
@@ -200,22 +218,35 @@ export default function WorkshopPage() {
 					image: '/pracownie/stolarnia/product3.jpg',
 				},
 			],
-			schedule: { monday: '7:00 - 13:00', tuesday: '7:00 - 13:00', wednesday: '7:00 - 13:00', thursday: '7:00 - 13:00', friday: '7:00 - 11:00' },
-			instructor: {
-				name: 'Mgr Katarzyna Czysta',
-				experience: '18 lat doświadczenia',
-				description: 'Specjalistka w dziedzinie usług porządkowych i higieny.',
-				avatar: '/instructors/katarzyna-czysta.jpg',
+			team: {
+				size: '3 specjalistów',
+				experience: 'Średnio 10 lat doświadczenia',
+				specialization: 'Utrzymanie czystości',
 			},
+			equipment: [
+				'Profesjonalne odkurzacze',
+				'Maszyny do mycia podłóg',
+				'Ekologiczne środki chemiczne',
+				'Sprzęt do mycia okien',
+				'Narzędzia specjalistyczne',
+			],
 		},
 		masazysta: {
-			title: 'Pracownia Masażu',
-			subtitle: 'Sztuka terapeutycznego dotyku',
-			description: 'Pracownia masażu medycznego i relaksacyjnego, kształcąca umiejętności terapeutyczne.',
+			title: 'Dział Wellness',
+			subtitle: 'Dbałość o komfort zespołu',
+			description:
+				'Nasz dział wellness to przestrzeń relaksu i regeneracji dla pracowników. Oferujemy profesjonalne usługi masażu, które pomagają utrzymać zdrowie i dobre samopoczucie naszego zespołu.',
 			image: '/pracownie/masazysta.jpg',
 			bgColor: 'linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%)',
 			icon: '💆',
-			skills: ['Masaż klasyczny', 'Masaż relaksacyjny', 'Anatomia człowieka', 'Techniki manualne', 'Aromaterapia', 'Refleksologia'],
+			capabilities: [
+				'Masaże relaksacyjne',
+				'Terapie manualne',
+				'Programy antystresowe',
+				'Ergonomia pracy',
+				'Profilaktyka zdrowotna',
+				'Coaching wellness',
+			],
 			projects: [
 				{
 					name: 'Drewniane budki lęgowe dla ptaków',
@@ -236,25 +267,24 @@ export default function WorkshopPage() {
 					image: '/pracownie/stolarnia/product3.jpg',
 				},
 			],
-			schedule: { monday: '8:00 - 14:00', tuesday: '8:00 - 14:00', wednesday: '8:00 - 14:00', thursday: '8:00 - 14:00', friday: '8:00 - 12:00' },
-			instructor: {
-				name: 'Lic. Adam Wellness',
-				experience: '22 lata doświadczenia',
-				description: 'Certyfikowany masażysta i fizjoterapeuta.',
-				avatar: '/instructors/adam-wellness.jpg',
+			team: {
+				size: '2 terapeutów',
+				experience: 'Średnio 20 lat doświadczenia',
+				specialization: 'Masaż i terapie manualne',
 			},
+			equipment: ['Łóżka do masażu', 'Olejki aromaterapeutyczne', 'Sprzęt do fizjoterapii', 'Systemy relaksacyjne', 'Akcesoria wellness'],
 		},
 	};
 
-	const workshop = workshopsData[slug];
+	const department = departmentsData[slug];
 
-	if (!workshop) {
+	if (!department) {
 		return (
 			<div className={styles.notFound}>
 				<div className={styles.notFoundCard}>
 					<div className={styles.notFoundIcon}>❌</div>
-					<h1>Pracownia nie znaleziona</h1>
-					<p>Przepraszamy, nie możemy znaleźć tej pracowni.</p>
+					<h1>Dział nie znaleziony</h1>
+					<p>Przepraszamy, nie możemy znaleźć tego działu.</p>
 					<Link href='/' className={styles.backButton}>
 						<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 							<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
@@ -266,62 +296,61 @@ export default function WorkshopPage() {
 		);
 	}
 
-	const dayNames = {
-		monday: 'Poniedziałek',
-		tuesday: 'Wtorek',
-		wednesday: 'Środa',
-		thursday: 'Czwartek',
-		friday: 'Piątek',
-	};
-
 	return (
 		<div className={styles.container}>
 			{/* Modern Hero Section */}
-			<section className={styles.hero} style={{ background: workshop.bgColor }}>
+			<section className={styles.hero} style={{ background: department.bgColor }}>
 				<div className={styles.heroPattern}></div>
 				<div className={styles.heroContent}>
 					<div className={styles.heroLeft}>
-						<div className={styles.heroIcon}>{workshop.icon}</div>
-						<h1 className={styles.heroTitle}>{workshop.title}</h1>
-						<p className={styles.heroSubtitle}>{workshop.subtitle}</p>
-						<p className={styles.heroDescription}>{workshop.description}</p>
+						<div className={styles.heroIcon}>{department.icon}</div>
+						<h1 className={styles.heroTitle}>{department.title}</h1>
+						<p className={styles.heroSubtitle}>{department.subtitle}</p>
+						<p className={styles.heroDescription}>{department.description}</p>
 						<div className={styles.heroStats}>
 							<div className={styles.heroStat}>
-								<span className={styles.statNumber}>{workshop.skills.length}</span>
-								<span className={styles.statLabel}>Umiejętności</span>
+								<span className={styles.statNumber}>{department.capabilities.length}</span>
+								<span className={styles.statLabel}>Możliwości</span>
 							</div>
 							<div className={styles.heroStat}>
-								<span className={styles.statNumber}>{workshop.projects.length}</span>
-								<span className={styles.statLabel}>Projektów</span>
+								<span className={styles.statNumber}>{department.projects.length}</span>
+								<span className={styles.statLabel}>Produktów</span>
 							</div>
 							<div className={styles.heroStat}>
-								<span className={styles.statNumber}>5</span>
-								<span className={styles.statLabel}>Dni w tygodniu</span>
+								<span className={styles.statNumber}>{department.team.size.split(' ')[0]}</span>
+								<span className={styles.statLabel}>Specjalistów</span>
 							</div>
 						</div>
 					</div>
 					<div className={styles.heroRight}>
 						<div className={styles.heroImageWrapper}>
-							<Image src={workshop.image} alt={workshop.title} fill className={styles.heroImage} sizes='(max-width: 768px) 100vw, 50vw' priority />
+							<Image
+								src={department.image}
+								alt={department.title}
+								fill
+								className={styles.heroImage}
+								sizes='(max-width: 768px) 100vw, 50vw'
+								priority
+							/>
 							<div className={styles.heroImageOverlay}></div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* Skills Section */}
+			{/* Capabilities Section */}
 			<section className={styles.skillsSection}>
 				<div className={styles.containerLimited}>
 					<div className={styles.sectionHeader}>
-						<h2 className={styles.sectionTitle}>Czego się nauczysz?</h2>
-						<p className={styles.sectionSubtitle}>Rozwijaj swoje umiejętności krok po kroku</p>
+						<h2 className={styles.sectionTitle}>Nasze możliwości</h2>
+						<p className={styles.sectionSubtitle}>Zobacz, co potrafimy najlepiej</p>
 					</div>
 					<div className={styles.skillsGrid}>
-						{workshop.skills.map((skill, index) => (
+						{department.capabilities.map((capability, index) => (
 							<div key={index} className={styles.skillCard} style={{ animationDelay: `${index * 0.1}s` }}>
 								<div className={styles.skillNumber}>{String(index + 1).padStart(2, '0')}</div>
 								<div className={styles.skillContent}>
-									<h3>{skill}</h3>
+									<h3>{capability}</h3>
 									<div className={styles.skillProgress}>
 										<div className={styles.skillProgressBar}></div>
 									</div>
@@ -332,15 +361,15 @@ export default function WorkshopPage() {
 				</div>
 			</section>
 
-			{/* Projects Showcase */}
+			{/* Products Showcase */}
 			<section className={styles.projectsSection}>
 				<div className={styles.containerLimited}>
 					<div className={styles.sectionHeader}>
-						<h2 className={styles.sectionTitle}>Nasze realizacje</h2>
-						<p className={styles.sectionSubtitle}>Zobacz, co tworzą nasi uczestnicy</p>
+						<h2 className={styles.sectionTitle}>Nasze produkty</h2>
+						<p className={styles.sectionSubtitle}>Przykłady naszych realizacji</p>
 					</div>
 					<div className={styles.projectsGrid}>
-						{workshop.projects.map((project, index) => (
+						{department.projects.map((project, index) => (
 							<div key={index} className={styles.projectCard}>
 								<div className={styles.projectImageWrapper}>
 									<Image
@@ -374,11 +403,11 @@ export default function WorkshopPage() {
 				</div>
 			</section>
 
-			{/* Info Cards */}
+			{/* Team & Equipment Section */}
 			<section className={styles.infoSection}>
 				<div className={styles.containerLimited}>
 					<div className={styles.infoGrid}>
-						{/* Schedule Card */}
+						{/* Team Card */}
 						<div className={styles.infoCard}>
 							<div className={styles.cardHeader}>
 								<div className={styles.cardIcon}>
@@ -387,47 +416,95 @@ export default function WorkshopPage() {
 											strokeLinecap='round'
 											strokeLinejoin='round'
 											strokeWidth={2}
-											d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'
+											d='M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z'
 										/>
 									</svg>
 								</div>
-								<h3>Harmonogram zajęć</h3>
+								<h3>Nasz zespół</h3>
 							</div>
-							<div className={styles.scheduleList}>
-								{Object.entries(workshop.schedule).map(([day, hours]) => (
-									<div key={day} className={styles.scheduleItem}>
-										<span className={styles.scheduleDay}>{dayNames[day]}</span>
-										<span className={styles.scheduleDots}></span>
-										<span className={styles.scheduleHours}>{hours}</span>
+							<div className={styles.teamInfo}>
+								<div className={styles.teamStat}>
+									<span className={styles.teamLabel}>Wielkość zespołu:</span>
+									<span className={styles.teamValue}>{department.team.size}</span>
+								</div>
+								<div className={styles.teamStat}>
+									<span className={styles.teamLabel}>Doświadczenie:</span>
+									<span className={styles.teamValue}>{department.team.experience}</span>
+								</div>
+								<div className={styles.teamStat}>
+									<span className={styles.teamLabel}>Specjalizacja:</span>
+									<span className={styles.teamValue}>{department.team.specialization}</span>
+								</div>
+							</div>
+						</div>
+
+						{/* Equipment Card */}
+						<div className={styles.infoCard}>
+							<div className={styles.cardHeader}>
+								<div className={styles.cardIcon}>
+									<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+										<path
+											strokeLinecap='round'
+											strokeLinejoin='round'
+											strokeWidth={2}
+											d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+										/>
+										<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
+									</svg>
+								</div>
+								<h3>Nasz sprzęt</h3>
+							</div>
+							<div className={styles.equipmentList}>
+								{department.equipment.map((item, index) => (
+									<div key={index} className={styles.equipmentItem}>
+										<div className={styles.equipmentIcon}>
+											<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+												<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' />
+											</svg>
+										</div>
+										<span>{item}</span>
 									</div>
 								))}
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
 
-						{/* Instructor Card */}
-						<div className={styles.infoCard}>
-							<div className={styles.cardHeader}>
-								<div className={styles.cardIcon}>
-									<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
-										<path
-											strokeLinecap='round'
-											strokeLinejoin='round'
-											strokeWidth={2}
-											d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
-										/>
-									</svg>
-								</div>
-								<h3>Twój instruktor</h3>
+			{/* Process Section - Nowa sekcja */}
+			<section className={styles.processSection}>
+				<div className={styles.containerLimited}>
+					<div className={styles.sectionHeader}>
+						<h2 className={styles.sectionTitle}>Jak pracujemy</h2>
+						<p className={styles.sectionSubtitle}>Nasz proces produkcyjny krok po kroku</p>
+					</div>
+					<div className={styles.processGrid}>
+						<div className={styles.processStep}>
+							<div className={styles.processNumber}>01</div>
+							<div className={styles.processContent}>
+								<h3>Analiza projektu</h3>
+								<p>Dokładnie analizujemy wymagania i specyfikację projektu, aby zapewnić najlepsze rezultaty.</p>
 							</div>
-							<div className={styles.instructorInfo}>
-								<div className={styles.instructorAvatar}>
-									<Image src={workshop.instructor.avatar} alt={workshop.instructor.name} fill className={styles.avatarImage} sizes='80px' />
-								</div>
-								<div className={styles.instructorDetails}>
-									<h4>{workshop.instructor.name}</h4>
-									<p className={styles.instructorExperience}>{workshop.instructor.experience}</p>
-									<p className={styles.instructorDescription}>{workshop.instructor.description}</p>
-								</div>
+						</div>
+						<div className={styles.processStep}>
+							<div className={styles.processNumber}>02</div>
+							<div className={styles.processContent}>
+								<h3>Przygotowanie materiałów</h3>
+								<p>Selekcjonujemy i przygotowujemy materiały najwyższej jakości, dopasowane do projektu.</p>
+							</div>
+						</div>
+						<div className={styles.processStep}>
+							<div className={styles.processNumber}>03</div>
+							<div className={styles.processContent}>
+								<h3>Realizacja</h3>
+								<p>Wykorzystujemy nasze doświadczenie i nowoczesny sprzęt do precyzyjnego wykonania produktu.</p>
+							</div>
+						</div>
+						<div className={styles.processStep}>
+							<div className={styles.processNumber}>04</div>
+							<div className={styles.processContent}>
+								<h3>Kontrola jakości</h3>
+								<p>Każdy produkt przechodzi szczegółową kontrolę jakości przed przekazaniem do klienta.</p>
 							</div>
 						</div>
 					</div>
@@ -435,15 +512,15 @@ export default function WorkshopPage() {
 			</section>
 
 			{/* CTA Section */}
-			<section className={styles.ctaSection} style={{ background: workshop.bgColor }}>
+			<section className={styles.ctaSection} style={{ background: department.bgColor }}>
 				<div className={styles.containerLimited}>
 					<div className={styles.ctaContent}>
-						<div className={styles.ctaIcon}>{workshop.icon}</div>
-						<h2>Gotowy na nową przygodę?</h2>
-						<p>Dołącz do nas i rozpocznij swoją podróż w {workshop.title.toLowerCase()}</p>
+						<div className={styles.ctaIcon}>{department.icon}</div>
+						<h2>Chcesz poznać nasz dział?</h2>
+						<p>Skontaktuj się z nami, aby dowiedzieć się więcej o możliwościach {department.title.toLowerCase()}</p>
 						<div className={styles.ctaButtons}>
 							<Link href='/kontakt' className={styles.ctaPrimary}>
-								<span>Zapisz się teraz</span>
+								<span>Skontaktuj się z nami</span>
 								<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 									<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7l5 5m0 0l-5 5m5-5H6' />
 								</svg>
@@ -452,7 +529,7 @@ export default function WorkshopPage() {
 								<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 									<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M10 19l-7-7m0 0l7-7m-7 7h18' />
 								</svg>
-								<span>Powrót do strony głównej</span>
+								<span>Poznaj inne działy</span>
 							</Link>
 						</div>
 					</div>
