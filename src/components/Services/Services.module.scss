@@ -108,7 +108,7 @@ $transition: all 0.3s ease;
 
 .header {
 	text-align: center;
-	margin-bottom: 100px;
+	margin-bottom: 20px;
 }
 
 .title {
@@ -142,67 +142,68 @@ $transition: all 0.3s ease;
 .tabsContainer {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 80px;
+	padding: 32px 24px;
+	margin-bottom: 48px;
 }
 
 .tabs {
-	display: flex;
-	background: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(20px);
-	border-radius: 20px;
-	padding: 12px;
-	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-	border: 1px solid rgba(255, 255, 255, 0.2);
 	position: relative;
+	display: flex;
+	border-radius: 16px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	padding: 6px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 
-	// Animowany slider background - domyślnie na lewym tabie
-	&::before {
-		content: '';
-		position: absolute;
-		top: 12px;
-		left: 12px;
-		width: calc(50% - 6px);
-		height: calc(100% - 24px);
-		background: linear-gradient(135deg, $brand-blue, $brand-purple);
-		border-radius: 16px;
-		box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-		transition: transform 0.3s ease-out;
-		z-index: 1;
-		transform: translateX(0%);
-	}
+.slider {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: calc(50% - 6px);
+	height: calc(100% - 12px);
+	background: linear-gradient(135deg, #5d65ff, #9f5cff);
+	border-radius: 12px;
+	transition: transform 0.4s ease;
+	z-index: 0;
+}
 
-	// Klasa gdy aktywny lub hovered jest drugi tab
-	&.servicesActive::before {
-		transform: translateX(100%);
-	}
+.servicesActive .slider {
+	transform: translateX(100%);
+}
+
+.workshopsActive .slider {
+	transform: translateX(0%);
 }
 
 .tab {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	padding: 20px 35px;
+	position: relative;
+	z-index: 1;
+	width: 180px;
+	padding: 14px 24px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
 	background: transparent;
 	border: none;
-	border-radius: 16px;
 	cursor: pointer;
-	font-size: 1.1rem;
-	font-weight: 600;
-	color: rgba(255, 255, 255, 0.8);
-	white-space: nowrap;
-	position: relative;
-	z-index: 2;
-	flex: 1;
-	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 
 	svg {
-		width: 26px;
-		height: 26px;
-		stroke-width: 2;
-		transition: all 0.3s ease;
+		width: 22px;
+		height: 22px;
 	}
 
 	&:hover {
+		color: white;
+	}
+
+	&.tabActive {
 		color: white;
 	}
 }
@@ -250,6 +251,10 @@ $transition: all 0.3s ease;
 		&::before {
 			transform: scaleX(1);
 		}
+
+		.workshopIcon {
+			transform: scale(1.1) rotate(5deg);
+		}
 	}
 }
 
@@ -263,7 +268,7 @@ $transition: all 0.3s ease;
 	justify-content: center;
 	color: white;
 	margin-bottom: 30px;
-	transition: $transition;
+	transition: all 0.3s ease;
 	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 
@@ -271,6 +276,7 @@ $transition: all 0.3s ease;
 		width: 38px;
 		height: 38px;
 		stroke-width: 2;
+		transition: all 0.3s ease;
 	}
 }
 
@@ -326,84 +332,144 @@ $transition: all 0.3s ease;
 	}
 }
 
-// Commercial Services Styles
+// ULEPSZONE STYLE DLA USŁUG KOMERCYJNYCH
 .servicesGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	gap: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+	gap: 32px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .serviceCard {
-	background: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(20px);
-	border-radius: 24px;
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(25px);
+	border-radius: 20px;
 	overflow: hidden;
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-	transition: $transition;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	position: relative;
+
+	// Gradient border effect
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		padding: 1px;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+		border-radius: 20px;
+		mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+		mask-composite: subtract;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
 
 	&:hover {
-		transform: translateY(-15px);
-		box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
-		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-8px) scale(1.02);
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+		background: rgba(255, 255, 255, 0.18);
+
+		&::before {
+			opacity: 1;
+		}
+
+		.serviceIcon {
+			transform: scale(1.1) rotate(5deg);
+		}
+
+		.contactBtn {
+			transform: translateY(-2px);
+			box-shadow: 0 10px 30px rgba(93, 101, 255, 0.4);
+		}
 	}
 }
 
 .serviceHeader {
-	padding: 45px 45px 0;
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+	padding: 36px 36px 24px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
 	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 20px;
 
+	// Subtelny accent line
 	&::after {
 		content: '';
 		position: absolute;
 		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 2px;
-		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-	}
-
-	h3 {
-		font-size: 2.1rem;
-		font-weight: 700;
-		color: white;
-		margin-bottom: 35px;
-		position: relative;
-		letter-spacing: -0.01em;
-		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		left: 36px;
+		right: 36px;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 	}
 }
 
+.serviceIcon {
+	width: 60px;
+	height: 60px;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	transition: all 0.3s ease;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	flex-shrink: 0;
+
+	svg {
+		width: 28px;
+		height: 28px;
+		stroke-width: 2;
+	}
+}
+
+.serviceTitle {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: white;
+	margin: 0;
+	letter-spacing: -0.01em;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 .serviceContent {
-	padding: 45px;
+	padding: 0 36px 36px;
 
 	p {
-		font-size: 1.2rem;
-		color: rgba(255, 255, 255, 0.9);
+		margin-top: 12px;
+		font-size: 15px;
 		line-height: 1.6;
-		margin-bottom: 30px;
+		color: #e2e2e2;
+		opacity: 0.95;
+	}
+
+	ul {
+		margin-top: 16px;
 	}
 }
 
 .featuresList {
 	list-style: none;
 	padding: 0;
-	margin: 0 0 40px 0;
+	margin: 0 0 32px 0;
 
 	li {
 		display: flex;
 		align-items: center;
-		gap: 18px;
-		padding: 14px 0;
-		font-size: 1.1rem;
-		color: rgba(255, 255, 255, 0.85);
+		gap: 14px;
+		padding: 10px 0;
+		font-size: 1.05rem;
+		color: rgba(255, 255, 255, 0.9);
 		font-weight: 500;
+		position: relative;
 
 		svg {
-			width: 22px;
-			height: 22px;
-			color: rgba(255, 255, 255, 0.9);
+			width: 18px;
+			height: 18px;
+			color: rgba(255, 255, 255, 0.8);
 			stroke-width: 2.5;
 			flex-shrink: 0;
 		}
@@ -412,35 +478,25 @@ $transition: all 0.3s ease;
 
 .contactBtn {
 	width: 100%;
-	background: linear-gradient(135deg, $brand-blue, $brand-purple);
-	color: white;
-	border: none;
-	padding: 22px 40px;
-	border-radius: 16px;
-	font-size: 1.1rem;
-	font-weight: 700;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.9);
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	padding: 16px 32px;
+	border-radius: 14px;
+	font-size: 1.05rem;
+	font-weight: 600;
 	cursor: pointer;
-	transition: $transition;
+	transition: all 0.3s ease;
 	position: relative;
 	overflow: hidden;
 	letter-spacing: 0.3px;
 
-	&::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
-		opacity: 0;
-		transition: $transition;
-	}
-
 	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
-
-		&::before {
-			opacity: 1;
-		}
+		background: rgba(255, 255, 255, 0.15);
+		color: white;
+		border-color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 	}
 
 	&:active {
@@ -456,8 +512,8 @@ $transition: all 0.3s ease;
 	}
 
 	.servicesGrid {
-		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-		gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 28px;
 	}
 
 	.subtitle {
@@ -476,20 +532,20 @@ $transition: all 0.3s ease;
 
 	.tabs {
 		flex-direction: column;
-		gap: 12px;
-		padding: 12px;
+		gap: 3px;
+		padding: 6px;
 
 		&::before {
-			top: 12px;
-			left: 12px;
-			width: calc(100% - 24px);
-			height: calc(50% - 6px);
-			transition: transform 0.3s ease-out;
+			top: 6px;
+			left: 6px;
+			width: calc(100% - 12px);
+			height: calc(50% - 1.5px);
+			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 			transform: translateY(0%);
 		}
 
 		&.servicesActive::before {
-			transform: translateY(calc(100% + 12px));
+			transform: translateY(calc(100% + 3px));
 		}
 	}
 
@@ -511,9 +567,20 @@ $transition: all 0.3s ease;
 		padding: 40px;
 	}
 
-	.serviceHeader,
+	.serviceHeader {
+		padding: 30px 30px 20px;
+		flex-direction: column;
+		text-align: center;
+		gap: 16px;
+
+		&::after {
+			left: 30px;
+			right: 30px;
+		}
+	}
+
 	.serviceContent {
-		padding: 40px;
+		padding: 0 30px 30px;
 	}
 
 	.subtitle {
@@ -544,9 +611,31 @@ $transition: all 0.3s ease;
 		padding: 30px;
 	}
 
-	.serviceHeader,
+	.serviceHeader {
+		padding: 24px 24px 16px;
+
+		&::after {
+			left: 24px;
+			right: 24px;
+		}
+	}
+
 	.serviceContent {
-		padding: 30px;
+		padding: 0 24px 24px;
+	}
+
+	.serviceIcon {
+		width: 50px;
+		height: 50px;
+
+		svg {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	.serviceTitle {
+		font-size: 1.6rem;
 	}
 
 	.workshopContent {

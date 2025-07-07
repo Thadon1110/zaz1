@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './Services.module.scss';
+import Link from 'next/link';
 
 export default function Services() {
 	const [activeTab, setActiveTab] = useState('workshops');
@@ -11,6 +12,7 @@ export default function Services() {
 		{
 			name: 'Stolarnia',
 			description: 'Warsztat stolarski oferuje naukę podstawowych technik obróbki drewna, tworzenia mebli i przedmiotów użytkowych.',
+			link: '/pracownie/stolarnia',
 			icon: (
 				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 					<path
@@ -25,6 +27,7 @@ export default function Services() {
 		{
 			name: 'Artystyczna',
 			description: 'Pracownia artystyczna rozwija kreatywność poprzez malarstwo, rzeźbę, ceramikę i inne formy ekspresji artystycznej.',
+			link: '/pracownie/artystyczna',
 			icon: (
 				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 					<path
@@ -39,6 +42,7 @@ export default function Services() {
 		{
 			name: 'Szwalnia',
 			description: 'Pracownia krawiecka uczy szycia, napraw odzieży oraz tworzenia produktów tekstylnych.',
+			link: '/pracownie/szwalnia',
 			icon: (
 				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 					<path
@@ -53,6 +57,7 @@ export default function Services() {
 		{
 			name: 'Informatyczna',
 			description: 'Pracownia komputerowa oferuje naukę obsługi komputera, podstaw programowania i aplikacji biurowych.',
+			link: '/pracownie/informatyczna',
 			icon: (
 				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 					<path
@@ -67,6 +72,7 @@ export default function Services() {
 		{
 			name: 'Sprzątająca',
 			description: 'Pracownia usług porządkowych kształci umiejętności sprzątania i utrzymania czystości w różnych obiektach.',
+			link: '/pracownie/sprzatajaca',
 			icon: (
 				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 					<path
@@ -81,6 +87,7 @@ export default function Services() {
 		{
 			name: 'Masażysta',
 			description: 'Pracownia masażu medycznego i relaksacyjnego, kształcąca umiejętności terapeutyczne.',
+			link: '/pracownie/masazysta',
 			icon: (
 				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 					<path
@@ -99,23 +106,52 @@ export default function Services() {
 			title: 'Laser',
 			description: 'Profesjonalne usługi cięcia i grawerowania laserowego różnych materiałów.',
 			features: ['Cięcie precyzyjne', 'Grawerowanie', 'Personalizacja produktów'],
+			link: '/kontakt',
+			icon: (
+				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+					<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 10V3L4 14h7v7l9-11h-7z' />
+				</svg>
+			),
 		},
 		{
 			title: 'Drukarnia do nadruków na tkaninach',
 			description: 'Specjalistyczne nadruki na odzieży i tekstyliach metodą termotransferową.',
 			features: ['Nadruki na koszulkach', 'Personalizacja odzieży', 'Małe i duże nakłady'],
+			link: '/kontakt',
+			icon: (
+				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+					<path
+						strokeLinecap='round'
+						strokeLinejoin='round'
+						strokeWidth={2}
+						d='M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z'
+					/>
+				</svg>
+			),
 		},
 		{
 			title: 'Prace techniczne',
 			description: 'Wykonywanie różnorodnych prac technicznych i remontowych.',
 			features: ['Naprawy drobne', 'Prace montażowe', 'Konserwacja sprzętu'],
+			link: '/kontakt',
+			icon: (
+				<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
+					<path
+						strokeLinecap='round'
+						strokeLinejoin='round'
+						strokeWidth={2}
+						d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+					/>
+					<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 12a3 3 0 11-6 0 3 3 0 016 0z' />
+				</svg>
+			),
 		},
 	];
 
 	// Określa pozycję slidera na podstawie hover lub aktywnego taba
 	const getSliderClass = () => {
 		const displayTab = hoveredTab || activeTab;
-		return displayTab === 'services' ? styles.servicesActive : '';
+		return displayTab === 'services' ? styles.servicesActive : styles.workshopsActive;
 	};
 
 	return (
@@ -129,6 +165,8 @@ export default function Services() {
 
 				<div className={styles.tabsContainer}>
 					<div className={`${styles.tabs} ${getSliderClass()}`}>
+						<div className={styles.slider}></div>
+
 						<button
 							className={`${styles.tab} ${activeTab === 'workshops' ? styles.tabActive : ''}`}
 							onClick={() => setActiveTab('workshops')}
@@ -173,13 +211,13 @@ export default function Services() {
 										<div className={styles.workshopIcon}>{workshop.icon}</div>
 										<div className={styles.workshopContent}>
 											<h3>{workshop.name}</h3>
-											<p>{workshop.description}</p>
-											<button className={styles.learnMore}>
+											<p>{workshop.descritiopn}</p>
+											<Link href={workshop.link} className={styles.learnMore}>
 												Dowiedz się więcej
 												<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 													<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 12h14M12 5l7 7-7 7' />
 												</svg>
-											</button>
+											</Link>
 										</div>
 									</div>
 								))}
@@ -193,7 +231,8 @@ export default function Services() {
 								{services.map((service, index) => (
 									<div key={index} className={styles.serviceCard}>
 										<div className={styles.serviceHeader}>
-											<h3>{service.title}</h3>
+											<div className={styles.serviceIcon}>{service.icon}</div>
+											<h3 className={styles.serviceTitle}>{service.title}</h3>
 										</div>
 										<div className={styles.serviceContent}>
 											<p>{service.description}</p>
@@ -207,7 +246,9 @@ export default function Services() {
 													</li>
 												))}
 											</ul>
-											<button className={styles.contactBtn}>Skontaktuj się</button>
+											<Link href={service.link} className={styles.contactBtn}>
+												Skontaktuj się
+											</Link>
 										</div>
 									</div>
 								))}

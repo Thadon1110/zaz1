@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import styles from './Hero.module.scss';
+import Link from 'next/link';
 
 export default function Hero() {
 	const [scrollY, setScrollY] = useState(0);
@@ -40,12 +41,12 @@ export default function Hero() {
 
 				<p className={styles.heroDescription}>Tworzymy przyszłość poprzez nowoczesne technologie i dedykowane podejście do każdego projektu</p>
 
-				<button className={styles.heroBtn}>
+				<Link href='/#about' className={styles.heroBtn}>
 					Poznaj nas
 					<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>
 						<path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 12h14M12 5l7 7-7 7' />
 					</svg>
-				</button>
+				</Link>
 			</div>
 
 			<div className={styles.scrollIndicator}>

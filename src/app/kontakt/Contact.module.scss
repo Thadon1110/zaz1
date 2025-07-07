@@ -1,0 +1,858 @@
+@import '@/styles/colors';
+
+$transition: all 0.3s ease;
+
+.container {
+	min-height: 100vh;
+	background: #fff;
+}
+
+.containerLimited {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+// Hero Section
+.hero {
+	position: relative;
+	height: 100vh;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.heroBackground {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.heroImage {
+	object-fit: cover;
+	object-position: center;
+}
+
+.heroOverlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(29, 78, 216, 0.9) 0%, rgba(147, 51, 234, 0.8) 50%, rgba(59, 130, 246, 0.85) 100%);
+	z-index: 1;
+}
+
+.heroContent {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 24px;
+}
+
+.heroText {
+	max-width: 700px;
+	color: white;
+	animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.heroTitle {
+	font-size: clamp(3rem, 8vw, 5.5rem);
+	font-weight: 800;
+	line-height: 0.9;
+	margin-bottom: 32px;
+	text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+	.titleLine {
+		display: block;
+		margin-bottom: 0.1em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.heroDescription {
+	font-size: 1.4rem;
+	line-height: 1.6;
+	margin-bottom: 48px;
+	color: rgba(255, 255, 255, 0.95);
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	max-width: 600px;
+}
+
+.heroStats {
+	display: flex;
+	gap: 48px;
+}
+
+.stat {
+	text-align: center;
+
+	.statNumber {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 900;
+		color: white;
+		text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+		margin-bottom: 8px;
+	}
+
+	.statLabel {
+		font-size: 0.95rem;
+		color: rgba(255, 255, 255, 0.8);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 500;
+	}
+}
+
+// Contact Methods Section
+.contactMethods {
+	padding: 100px 0;
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100px;
+		background: linear-gradient(to bottom, white, transparent);
+	}
+}
+
+.methodsGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 40px;
+	margin-top: -150px;
+	position: relative;
+	z-index: 10;
+}
+
+.methodCard {
+	background: white;
+	padding: 40px 32px;
+	border-radius: 24px;
+	text-align: center;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	transition: $transition;
+	border: 1px solid rgba(59, 130, 246, 0.1);
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, $brand-blue, $brand-purple);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: $transition;
+	}
+
+	&:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 30px 80px rgba(59, 130, 246, 0.2);
+		border-color: rgba(59, 130, 246, 0.3);
+
+		&::before {
+			transform: scaleX(1);
+		}
+
+		.methodIcon {
+			transform: scale(1.1);
+		}
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: $text-dark;
+		margin: 24px 0 16px;
+	}
+
+	p {
+		font-size: 1.1rem;
+		color: $text-gray;
+		margin-bottom: 12px;
+		font-weight: 500;
+	}
+}
+
+.methodIcon {
+	width: 80px;
+	height: 80px;
+	background: linear-gradient(135deg, $brand-blue, $brand-purple);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	margin: 0 auto;
+	transition: $transition;
+	box-shadow: 0 12px 30px rgba(59, 130, 246, 0.3);
+
+	svg {
+		width: 36px;
+		height: 36px;
+		stroke-width: 2;
+	}
+}
+
+.methodTime {
+	font-size: 0.9rem;
+	color: rgba(107, 114, 128, 0.8);
+	font-style: italic;
+}
+
+// Contact Section
+.contactSection {
+	padding: 120px 0;
+	background: white;
+}
+
+.contactGrid {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 80px;
+	align-items: start;
+}
+
+// Form Wrapper
+.formWrapper {
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	padding: 48px;
+	border-radius: 28px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.formHeader {
+	margin-bottom: 40px;
+	text-align: center;
+
+	h2 {
+		font-size: 2.2rem;
+		font-weight: 700;
+		color: $text-dark;
+		margin-bottom: 12px;
+	}
+
+	p {
+		font-size: 1rem;
+		color: $text-gray;
+		line-height: 1.6;
+	}
+}
+
+.contactForm {
+	.formGrid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+		margin-bottom: 24px;
+	}
+
+	.inputGroup {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		&:last-child {
+			grid-column: 1 / -1;
+		}
+
+		label {
+			font-size: 0.95rem;
+			font-weight: 600;
+			color: $text-dark;
+			margin-bottom: 4px;
+		}
+
+		input,
+		select,
+		textarea {
+			padding: 16px 20px;
+			border: 2px solid #e5e7eb;
+			border-radius: 14px;
+			font-size: 1rem;
+			transition: $transition;
+			background: white;
+			font-family: inherit;
+
+			&:focus {
+				outline: none;
+				border-color: $brand-blue;
+				box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+				transform: translateY(-1px);
+			}
+
+			&::placeholder {
+				color: #9ca3af;
+			}
+		}
+
+		textarea {
+			resize: vertical;
+			min-height: 120px;
+			line-height: 1.6;
+		}
+
+		select {
+			cursor: pointer;
+		}
+	}
+}
+
+.submitButton {
+	width: 100%;
+	background: linear-gradient(135deg, $brand-blue, $brand-purple);
+	color: white;
+	padding: 20px 32px;
+	border: none;
+	border-radius: 14px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: $transition;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 32px;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+		opacity: 0;
+		transition: $transition;
+	}
+
+	svg {
+		width: 20px;
+		height: 20px;
+		stroke-width: 2;
+		transition: $transition;
+	}
+
+	&:hover:not(:disabled) {
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+
+		&::before {
+			opacity: 1;
+		}
+
+		svg {
+			transform: translateX(4px);
+		}
+	}
+
+	&:disabled {
+		opacity: 0.8;
+		cursor: not-allowed;
+		transform: none;
+	}
+}
+
+.spinner {
+	width: 20px;
+	height: 20px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top: 2px solid white;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+// Info Wrapper
+.infoWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+
+.infoCard,
+.mapCard {
+	background: white;
+	padding: 32px;
+	border-radius: 20px;
+	box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(59, 130, 246, 0.1);
+	transition: $transition;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: $text-dark;
+		margin-bottom: 24px;
+		position: relative;
+		padding-bottom: 12px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 40px;
+			height: 3px;
+			background: linear-gradient(90deg, $brand-blue, $brand-purple);
+			border-radius: 2px;
+		}
+	}
+}
+
+.infoList {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.infoItem {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+
+	.infoIcon {
+		width: 48px;
+		height: 48px;
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1));
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $brand-blue;
+		flex-shrink: 0;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			stroke-width: 2;
+		}
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: $text-dark;
+		margin-bottom: 4px;
+	}
+
+	p {
+		font-size: 0.95rem;
+		color: $text-gray;
+		line-height: 1.5;
+	}
+}
+
+.mapPlaceholder {
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	border-radius: 16px;
+	padding: 48px 24px;
+	text-align: center;
+	margin-bottom: 24px;
+	transition: $transition;
+	cursor: pointer;
+	border: 2px solid rgba(59, 130, 246, 0.1);
+
+	&:hover {
+		border-color: rgba(59, 130, 246, 0.3);
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(168, 85, 247, 0.05));
+	}
+
+	.mapIcon {
+		width: 60px;
+		height: 60px;
+		background: linear-gradient(135deg, $brand-blue, $brand-purple);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		margin: 0 auto 16px;
+
+		svg {
+			width: 28px;
+			height: 28px;
+			stroke-width: 2;
+		}
+	}
+
+	p {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: $text-dark;
+		margin-bottom: 4px;
+	}
+
+	span {
+		font-size: 0.9rem;
+		color: $text-gray;
+		font-style: italic;
+	}
+}
+
+.directions {
+	h4 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: $text-dark;
+		margin-bottom: 16px;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			padding: 8px 0;
+			color: $text-gray;
+			position: relative;
+			padding-left: 20px;
+			font-size: 0.95rem;
+
+			&::before {
+				content: '→';
+				position: absolute;
+				left: 0;
+				color: $brand-blue;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+// Success Message
+.successWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 40px 24px;
+	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.successCard {
+	background: white;
+	padding: 60px 48px;
+	border-radius: 28px;
+	text-align: center;
+	box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	width: 100%;
+	animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.successIcon {
+	width: 100px;
+	height: 100px;
+	background: linear-gradient(135deg, #10b981, #059669);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	margin: 0 auto 32px;
+	box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
+	animation: pulse 2s ease-in-out infinite;
+
+	svg {
+		width: 48px;
+		height: 48px;
+		stroke-width: 3;
+	}
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+		box-shadow: 0 15px 40px rgba(16, 185, 129, 0.3);
+	}
+	50% {
+		transform: scale(1.05);
+		box-shadow: 0 20px 50px rgba(16, 185, 129, 0.4);
+	}
+}
+
+.successTitle {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: $text-dark;
+	margin-bottom: 16px;
+}
+
+.successText {
+	font-size: 1.2rem;
+	color: $text-gray;
+	line-height: 1.6;
+	margin-bottom: 40px;
+}
+
+.successButton {
+	background: linear-gradient(135deg, $brand-blue, $brand-purple);
+	color: white;
+	padding: 16px 32px;
+	border: none;
+	border-radius: 12px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: $transition;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 30px rgba(59, 130, 246, 0.4);
+	}
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+	.contactGrid {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+
+	.methodsGrid {
+		margin-top: -100px;
+	}
+
+	.heroStats {
+		gap: 32px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		height: 80vh;
+		min-height: 500px;
+	}
+
+	.heroStats {
+		flex-direction: column;
+		gap: 24px;
+		align-items: center;
+	}
+
+	.stat {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		text-align: left;
+
+		.statNumber {
+			font-size: 2rem;
+			margin-bottom: 0;
+		}
+
+		.statLabel {
+			font-size: 0.9rem;
+		}
+	}
+
+	.methodsGrid {
+		grid-template-columns: 1fr;
+		margin-top: -80px;
+		gap: 24px;
+	}
+
+	.methodCard {
+		padding: 32px 24px;
+	}
+
+	.contactSection {
+		padding: 80px 0;
+	}
+
+	.formWrapper {
+		padding: 32px 24px;
+	}
+
+	.contactForm .formGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.infoCard,
+	.mapCard {
+		padding: 24px;
+	}
+
+	.containerLimited {
+		padding: 0 20px;
+	}
+
+	.heroContent {
+		padding: 0 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		height: 70vh;
+		min-height: 450px;
+	}
+
+	.heroTitle {
+		font-size: 2.5rem;
+	}
+
+	.heroDescription {
+		font-size: 1.1rem;
+	}
+
+	.methodCard {
+		padding: 24px 20px;
+
+		h3 {
+			font-size: 1.3rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	.methodIcon {
+		width: 60px;
+		height: 60px;
+
+		svg {
+			width: 28px;
+			height: 28px;
+		}
+	}
+
+	.formWrapper {
+		padding: 24px 20px;
+	}
+
+	.formHeader {
+		h2 {
+			font-size: 1.8rem;
+		}
+
+		p {
+			font-size: 0.95rem;
+		}
+	}
+
+	.submitButton {
+		padding: 18px 24px;
+		font-size: 1rem;
+	}
+
+	.successCard {
+		padding: 40px 32px;
+		margin: 20px;
+	}
+
+	.successTitle {
+		font-size: 2rem;
+	}
+
+	.successText {
+		font-size: 1.1rem;
+	}
+
+	.infoItem {
+		flex-direction: column;
+		text-align: center;
+		gap: 12px;
+	}
+
+	.mapPlaceholder {
+		padding: 32px 20px;
+
+		.mapIcon {
+			width: 50px;
+			height: 50px;
+
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		p {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+	.heroText,
+	.successCard,
+	.methodCard,
+	.submitButton,
+	.successIcon {
+		animation: none;
+		transition: none;
+	}
+
+	.pulse {
+		animation: none;
+	}
+}
+
+// High contrast mode
+@media (prefers-contrast: high) {
+	.methodCard,
+	.formWrapper,
+	.infoCard,
+	.mapCard {
+		border: 2px solid $text-dark;
+	}
+
+	.submitButton {
+		border: 2px solid white;
+	}
+}
