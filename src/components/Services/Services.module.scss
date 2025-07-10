@@ -3,7 +3,7 @@
 $transition: all 0.3s ease;
 
 .services {
-	padding: 140px 0;
+	padding: 80px 0;
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	position: relative;
 	overflow: hidden;
@@ -14,8 +14,8 @@ $transition: all 0.3s ease;
 		position: absolute;
 		top: 10%;
 		left: 5%;
-		width: 300px;
-		height: 300px;
+		width: 200px;
+		height: 200px;
 		background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
 		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 		animation: rotate 40s linear infinite;
@@ -26,44 +26,12 @@ $transition: all 0.3s ease;
 		position: absolute;
 		bottom: 10%;
 		right: 8%;
-		width: 250px;
-		height: 250px;
+		width: 150px;
+		height: 150px;
 		background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
 		border-radius: 50%;
 		opacity: 0.6;
 		animation: pulse 6s ease-in-out infinite;
-	}
-
-	// Dodatkowe subtelne elementy
-	.decorativeElements {
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-		pointer-events: none;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 30%;
-			right: 15%;
-			width: 60px;
-			height: 60px;
-			background: rgba(255, 255, 255, 0.08);
-			border-radius: 50%;
-			animation: float 8s ease-in-out infinite;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 40%;
-			left: 12%;
-			width: 40px;
-			height: 40px;
-			background: rgba(255, 255, 255, 0.06);
-			transform: rotate(45deg);
-			animation: float 10s ease-in-out infinite reverse;
-		}
 	}
 }
 
@@ -88,52 +56,40 @@ $transition: all 0.3s ease;
 	}
 }
 
-@keyframes float {
-	0%,
-	100% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-20px);
-	}
-}
-
 .container {
-	max-width: 1300px;
 	margin: 0 auto;
-	padding: 0 24px;
+	padding: 0 20px;
 	position: relative;
 	z-index: 1;
 }
 
 .header {
 	text-align: center;
-	margin-bottom: 20px;
+	margin-bottom: 60px;
 }
 
 .title {
-	font-size: clamp(2.8rem, 6vw, 4.2rem);
+	font-size: 2.5rem;
 	font-weight: 800;
 	color: white;
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 	letter-spacing: -0.02em;
 	text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 	text-transform: uppercase;
 }
 
 .titleLine {
-	width: 120px;
-	height: 8px;
+	width: 80px;
+	height: 6px;
 	background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.8));
-	margin: 0 auto 40px;
+	margin: 0 auto 32px;
 	border-radius: 4px;
 	box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 .subtitle {
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 	color: rgba(255, 255, 255, 0.9);
-	max-width: 800px;
 	margin: 0 auto;
 	line-height: 1.7;
 	font-weight: 400;
@@ -142,8 +98,8 @@ $transition: all 0.3s ease;
 .tabsContainer {
 	display: flex;
 	justify-content: center;
-	padding: 32px 24px;
-	margin-bottom: 48px;
+	padding: 24px;
+	margin-bottom: 40px;
 }
 
 .tabs {
@@ -156,14 +112,16 @@ $transition: all 0.3s ease;
 	border: 1px solid rgba(255, 255, 255, 0.25);
 	padding: 6px;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	flex-direction: column;
+	gap: 3px;
 }
 
 .slider {
 	position: absolute;
 	top: 6px;
 	left: 6px;
-	width: calc(50% - 6px);
-	height: calc(100% - 12px);
+	width: calc(100% - 12px);
+	height: calc(50% - 1.5px);
 	background: linear-gradient(135deg, #5d65ff, #9f5cff);
 	border-radius: 12px;
 	transition: transform 0.4s ease;
@@ -171,19 +129,18 @@ $transition: all 0.3s ease;
 }
 
 .servicesActive .slider {
-	transform: translateX(100%);
+	transform: translateY(calc(100% + 3px));
 }
 
 .workshopsActive .slider {
-	transform: translateX(0%);
+	transform: translateY(0%);
 }
 
 .tab {
 	position: relative;
 	z-index: 1;
-	width: 180px;
-	padding: 14px 24px;
-	font-size: 16px;
+	padding: 16px 20px;
+	font-size: 1rem;
 	font-weight: 600;
 	color: #fff;
 	background: transparent;
@@ -192,11 +149,11 @@ $transition: all 0.3s ease;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
+	gap: 8px;
 
 	svg {
-		width: 22px;
-		height: 22px;
+		width: 18px;
+		height: 18px;
 	}
 
 	&:hover {
@@ -209,136 +166,170 @@ $transition: all 0.3s ease;
 }
 
 .content {
-	min-height: 600px;
+	min-height: 400px;
 }
 
-// Workshops Styles
+// Workshops Styles with Images
 .workshopsGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-	gap: 50px;
+	grid-template-columns: 1fr;
+	gap: 24px;
 }
 
 .workshop {
-	background: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(20px);
-	border-radius: 24px;
-	padding: 40px;
-	box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 	transition: $transition;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	position: relative;
-	overflow: hidden;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		height: 5px;
-		background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
-		transform: scaleX(0);
-		transform-origin: left;
-		transition: $transition;
-	}
+	min-height: 300px;
 
 	&:hover {
-		transform: translateY(-10px);
-		box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
-		background: rgba(255, 255, 255, 0.2);
+		transform: translateY(-8px);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 
-		&::before {
-			transform: scaleX(1);
+		.workshopContent {
+			transform: translateY(-4px);
 		}
 
 		.workshopIcon {
-			transform: scale(1.1) rotate(5deg);
+			transform: scale(1.1);
 		}
+	}
+
+	// Specific background images for each workshop
+	&:nth-child(1) {
+		background-image: linear-gradient(rgba(103, 126, 234, 0.85), rgba(118, 75, 162, 0.85)), url('/pracownie/stolarnia/main.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(2) {
+		background-image: linear-gradient(rgba(103, 126, 234, 0.85), rgba(118, 75, 162, 0.85)), url('/pracownie/rękodzieło/main.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(3) {
+		background-image: linear-gradient(rgba(103, 126, 234, 0.85), rgba(118, 75, 162, 0.85)), url('/pracownie/szwalnia/main.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(4) {
+		background-image: linear-gradient(rgba(103, 126, 234, 0.85), rgba(118, 75, 162, 0.85)), url('/pracownie/informatyka/main.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(5) {
+		background-image: linear-gradient(rgba(103, 126, 234, 0.85), rgba(118, 75, 162, 0.85)), url('/pracownie/sprzatajaca/main.jpg');
+		background-size: cover;
+		background-position: center;
+	}
+
+	&:nth-child(6) {
+		background-image: linear-gradient(rgba(103, 126, 234, 0.85), rgba(118, 75, 162, 0.85)), url('/pracownie/masazysta/main.jpg');
+		background-size: cover;
+		background-position: center;
 	}
 }
 
+.workshopContent {
+	position: relative;
+	z-index: 2;
+	padding: 32px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: $transition;
+}
+
 .workshopIcon {
-	width: 75px;
-	height: 75px;
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
-	border-radius: 20px;
+	width: 60px;
+	height: 60px;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 16px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: white;
-	margin-bottom: 30px;
-	transition: all 0.3s ease;
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	transition: $transition;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 	border: 1px solid rgba(255, 255, 255, 0.3);
+	align-self: flex-start;
 
 	svg {
-		width: 38px;
-		height: 38px;
+		width: 28px;
+		height: 28px;
 		stroke-width: 2;
-		transition: all 0.3s ease;
 	}
 }
 
 .workshopContent {
 	h3 {
-		font-size: 1.9rem;
+		font-size: 1.6rem;
 		font-weight: 700;
 		color: white;
-		margin-bottom: 22px;
+		margin-bottom: 16px;
 		letter-spacing: -0.01em;
-		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	}
 
 	p {
-		font-size: 1.2rem;
-		color: rgba(255, 255, 255, 0.9);
+		font-size: 1rem;
+		color: rgba(255, 255, 255, 0.95);
 		line-height: 1.6;
-		margin-bottom: 30px;
+		margin-bottom: 24px;
+		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 	}
 }
 
 .learnMore {
 	display: inline-flex;
 	align-items: center;
-	gap: 14px;
-	background: transparent;
+	gap: 10px;
+	background: rgba(255, 255, 255, 0.15);
 	border: 2px solid rgba(255, 255, 255, 0.8);
-	color: rgba(255, 255, 255, 0.9);
-	padding: 16px 30px;
-	border-radius: 14px;
-	font-size: 1.05rem;
+	color: white;
+	padding: 14px 24px;
+	border-radius: 12px;
+	font-size: 0.95rem;
 	font-weight: 600;
 	cursor: pointer;
 	transition: $transition;
+	text-decoration: none;
+	align-self: flex-start;
+	backdrop-filter: blur(10px);
 
 	svg {
-		width: 20px;
-		height: 20px;
+		width: 16px;
+		height: 16px;
 		stroke-width: 2;
 		transition: $transition;
 	}
 
 	&:hover {
-		background: rgba(255, 255, 255, 0.15);
-		color: white;
+		background: rgba(255, 255, 255, 0.25);
 		border-color: white;
-		transform: translateX(6px);
-		box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+		transform: translateX(4px);
+		box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 
 		svg {
-			transform: translateX(4px);
+			transform: translateX(2px);
 		}
 	}
 }
 
-// ULEPSZONE STYLE DLA USŁUG KOMERCYJNYCH
+// Services Styles - unchanged
 .servicesGrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-	gap: 32px;
-	max-width: 1200px;
-	margin: 0 auto;
+	grid-template-columns: 1fr;
+	gap: 24px;
 }
 
 .serviceCard {
@@ -351,7 +342,6 @@ $transition: all 0.3s ease;
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	position: relative;
 
-	// Gradient border effect
 	&::before {
 		content: '';
 		position: absolute;
@@ -375,7 +365,7 @@ $transition: all 0.3s ease;
 		}
 
 		.serviceIcon {
-			transform: scale(1.1) rotate(5deg);
+			transform: scale(1.1) rotate(8deg);
 		}
 
 		.contactBtn {
@@ -386,30 +376,31 @@ $transition: all 0.3s ease;
 }
 
 .serviceHeader {
-	padding: 36px 36px 24px;
+	padding: 30px 30px 20px;
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
 	position: relative;
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 16px;
+	flex-direction: column;
+	text-align: center;
 
-	// Subtelny accent line
 	&::after {
 		content: '';
 		position: absolute;
 		bottom: 0;
-		left: 36px;
-		right: 36px;
+		left: 30px;
+		right: 30px;
 		height: 1px;
 		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 	}
 }
 
 .serviceIcon {
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
-	border-radius: 16px;
+	border-radius: 14px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -420,14 +411,14 @@ $transition: all 0.3s ease;
 	flex-shrink: 0;
 
 	svg {
-		width: 28px;
-		height: 28px;
+		width: 24px;
+		height: 24px;
 		stroke-width: 2;
 	}
 }
 
 .serviceTitle {
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	font-weight: 700;
 	color: white;
 	margin: 0;
@@ -436,39 +427,34 @@ $transition: all 0.3s ease;
 }
 
 .serviceContent {
-	padding: 0 36px 36px;
+	padding: 0 30px 30px;
 
 	p {
 		margin-top: 12px;
-		font-size: 15px;
+		font-size: 0.95rem;
 		line-height: 1.6;
 		color: #e2e2e2;
 		opacity: 0.95;
-	}
-
-	ul {
-		margin-top: 16px;
 	}
 }
 
 .featuresList {
 	list-style: none;
 	padding: 0;
-	margin: 0 0 32px 0;
+	margin: 20px 0 24px 0;
 
 	li {
 		display: flex;
 		align-items: center;
-		gap: 14px;
-		padding: 10px 0;
-		font-size: 1.05rem;
+		gap: 12px;
+		padding: 8px 0;
+		font-size: 0.9rem;
 		color: rgba(255, 255, 255, 0.9);
 		font-weight: 500;
-		position: relative;
 
 		svg {
-			width: 18px;
-			height: 18px;
+			width: 16px;
+			height: 16px;
 			color: rgba(255, 255, 255, 0.8);
 			stroke-width: 2.5;
 			flex-shrink: 0;
@@ -478,159 +464,226 @@ $transition: all 0.3s ease;
 
 .contactBtn {
 	width: 100%;
-	background: transparent;
-	color: rgba(255, 255, 255, 0.9);
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
 	border: 2px solid rgba(255, 255, 255, 0.8);
-	padding: 16px 32px;
-	border-radius: 14px;
-	font-size: 1.05rem;
+	padding: 14px 24px;
+	border-radius: 12px;
+	font-size: 0.95rem;
 	font-weight: 600;
 	cursor: pointer;
 	transition: all 0.3s ease;
-	position: relative;
-	overflow: hidden;
-	letter-spacing: 0.3px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
 
 	&:hover {
-		background: rgba(255, 255, 255, 0.15);
-		color: white;
+		background: rgba(255, 255, 255, 0.2);
 		border-color: white;
 		transform: translateY(-2px);
 		box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 	}
-
-	&:active {
-		transform: translateY(0);
-	}
 }
 
-// Responsive Design
-@media (max-width: 1024px) {
-	.workshopsGrid {
-		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-		gap: 40px;
+// Media Queries - Mobile First
+@media (min-width: 576px) {
+	.container {
+		padding: 0 24px;
 	}
 
-	.servicesGrid {
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 28px;
+	.title {
+		font-size: 2.8rem;
+		margin-bottom: 28px;
+	}
+
+	.titleLine {
+		width: 100px;
+		height: 7px;
+		margin-bottom: 36px;
 	}
 
 	.subtitle {
-		font-size: 1.6rem;
+		font-size: 1.2rem;
+		max-width: 600px;
+	}
+
+	.tabs {
+		flex-direction: row;
+		gap: 0;
+		padding: 6px;
+	}
+
+	.slider {
+		width: calc(50% - 6px);
+		height: calc(100% - 12px);
+		transform: translateX(0%);
+	}
+
+	.servicesActive .slider {
+		transform: translateX(100%);
+	}
+
+	.workshopsActive .slider {
+		transform: translateX(0%);
+	}
+
+	.tab {
+		width: 160px;
+		padding: 14px 20px;
+		font-size: 1rem;
+	}
+
+	.workshopContent {
+		padding: 36px;
+	}
+
+	.workshopIcon {
+		width: 65px;
+		height: 65px;
+		margin-bottom: 24px;
+
+		svg {
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	.workshopContent h3 {
+		font-size: 1.7rem;
+		margin-bottom: 18px;
+	}
+
+	.workshopContent p {
+		font-size: 1.1rem;
+		margin-bottom: 28px;
+	}
+
+	.learnMore {
+		padding: 16px 28px;
+		font-size: 1rem;
+	}
+
+	.serviceHeader {
+		flex-direction: row;
+		text-align: left;
+		gap: 18px;
+	}
+
+	.serviceIcon {
+		width: 55px;
+		height: 55px;
+
+		svg {
+			width: 26px;
+			height: 26px;
+		}
+	}
+
+	.serviceTitle {
+		font-size: 1.5rem;
+	}
+
+	.serviceContent p {
+		font-size: 1rem;
+	}
+
+	.featuresList li {
+		font-size: 1rem;
+		padding: 10px 0;
 	}
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
 	.services {
 		padding: 100px 0;
 	}
 
 	.header {
-		margin-bottom: 80px;
+		margin-bottom: 70px;
 	}
 
-	.tabs {
-		flex-direction: column;
-		gap: 3px;
-		padding: 6px;
-
-		&::before {
-			top: 6px;
-			left: 6px;
-			width: calc(100% - 12px);
-			height: calc(50% - 1.5px);
-			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-			transform: translateY(0%);
-		}
-
-		&.servicesActive::before {
-			transform: translateY(calc(100% + 3px));
-		}
+	.title {
+		font-size: 3.2rem;
+		margin-bottom: 32px;
 	}
 
-	.tab {
-		justify-content: center;
-		padding: 20px 24px;
-		font-size: 1.1rem;
-	}
-
-	.workshopsGrid {
-		grid-template-columns: 1fr;
-	}
-
-	.servicesGrid {
-		grid-template-columns: 1fr;
-	}
-
-	.workshop {
-		padding: 40px;
-	}
-
-	.serviceHeader {
-		padding: 30px 30px 20px;
-		flex-direction: column;
-		text-align: center;
-		gap: 16px;
-
-		&::after {
-			left: 30px;
-			right: 30px;
-		}
-	}
-
-	.serviceContent {
-		padding: 0 30px 30px;
+	.titleLine {
+		width: 120px;
+		height: 8px;
+		margin-bottom: 40px;
 	}
 
 	.subtitle {
-		font-size: 1.5rem;
-	}
-}
-
-@media (max-width: 480px) {
-	.container {
-		padding: 0 20px;
+		font-size: 1.3rem;
+		max-width: 700px;
 	}
 
-	.services {
-		padding: 80px 0;
-	}
-
-	.workshopIcon {
-		width: 75px;
-		height: 75px;
+	.tab {
+		width: 180px;
+		padding: 16px 24px;
+		font-size: 1.1rem;
 
 		svg {
-			width: 38px;
-			height: 38px;
+			width: 20px;
+			height: 20px;
 		}
+	}
+
+	.workshopsGrid {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 32px;
 	}
 
 	.workshop {
-		padding: 30px;
+		min-height: 320px;
 	}
 
-	.serviceHeader {
-		padding: 24px 24px 16px;
+	.workshopContent {
+		padding: 40px;
+	}
 
-		&::after {
-			left: 24px;
-			right: 24px;
+	.workshopIcon {
+		width: 70px;
+		height: 70px;
+
+		svg {
+			width: 32px;
+			height: 32px;
 		}
 	}
 
-	.serviceContent {
-		padding: 0 24px 24px;
+	.workshopContent h3 {
+		font-size: 1.8rem;
+		margin-bottom: 20px;
+	}
+
+	.workshopContent p {
+		font-size: 1.15rem;
+		margin-bottom: 32px;
+	}
+
+	.servicesGrid {
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 32px;
+	}
+
+	.serviceHeader {
+		padding: 36px 36px 24px;
+		gap: 20px;
+
+		&::after {
+			left: 36px;
+			right: 36px;
+		}
 	}
 
 	.serviceIcon {
-		width: 50px;
-		height: 50px;
+		width: 60px;
+		height: 60px;
 
 		svg {
-			width: 24px;
-			height: 24px;
+			width: 28px;
+			height: 28px;
 		}
 	}
 
@@ -638,17 +691,96 @@ $transition: all 0.3s ease;
 		font-size: 1.6rem;
 	}
 
-	.workshopContent {
-		h3 {
-			font-size: 1.9rem;
-		}
+	.serviceContent {
+		padding: 0 36px 36px;
+	}
 
-		p {
-			font-size: 1.2rem;
+	.serviceContent p {
+		font-size: 1.05rem;
+	}
+
+	.featuresList {
+		margin: 24px 0 32px 0;
+	}
+
+	.featuresList li {
+		font-size: 1.05rem;
+		padding: 12px 0;
+
+		svg {
+			width: 18px;
+			height: 18px;
 		}
 	}
 
+	.contactBtn {
+		padding: 16px 32px;
+		font-size: 1.05rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+
+	.services {
+		padding: 120px 0;
+	}
+
+	.title {
+		font-size: 3.5rem;
+	}
+
 	.subtitle {
-		font-size: 1.3rem;
+		font-size: 1.4rem;
+		max-width: 800px;
+	}
+
+	.workshopsGrid {
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+		gap: 40px;
+	}
+
+	.workshop {
+		min-height: 340px;
+	}
+
+	.servicesGrid {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 40px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+
+	.services {
+		padding: 140px 0;
+	}
+
+	.title {
+		font-size: 4rem;
+	}
+
+	.subtitle {
+		font-size: 1.5rem;
+		max-width: 900px;
+	}
+
+	.workshopsGrid {
+		grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+		gap: 50px;
+	}
+
+	.workshop {
+		min-height: 360px;
+	}
+
+	.servicesGrid {
+		grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+		gap: 50px;
 	}
 }

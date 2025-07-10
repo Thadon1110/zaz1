@@ -208,10 +208,12 @@ export default function Services() {
 							<div className={styles.workshopsGrid}>
 								{workshops.map((workshop, index) => (
 									<div key={index} className={styles.workshop}>
-										<div className={styles.workshopIcon}>{workshop.icon}</div>
 										<div className={styles.workshopContent}>
-											<h3>{workshop.name}</h3>
-											<p>{workshop.descritiopn}</p>
+											<div className={styles.workshopIcon}>{workshop.icon}</div>
+											<div>
+												<h3>{workshop.name}</h3>
+												<p>{workshop.description}</p>
+											</div>
 											<Link href={workshop.link} className={styles.learnMore}>
 												Dowiedz się więcej
 												<svg viewBox='0 0 24 24' fill='none' stroke='currentColor'>

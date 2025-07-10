@@ -106,7 +106,7 @@ export default function About() {
 									</div>
 									<div className={styles.stat}>
 										<span className={styles.statNumber}>50+</span>
-										<span className={styles.statLabel}>Uczestników</span>
+										<span className={styles.statLabel}>Pracowników</span>
 									</div>
 								</div>
 							</div>
