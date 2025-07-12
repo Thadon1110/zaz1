@@ -44,16 +44,6 @@ export default function WorkshopPage() {
 					shortDescription: 'Ekologiczne budki lęgowe wykonane z naturalnego drewna',
 					category: 'Produkty ogrodowe',
 					images: ['/pracownie/stolarnia/budki/main.jpg', '/pracownie/stolarnia/budki/product1.jpg'],
-					specifications: [
-						'Materiał: drewno sosnowe',
-						'Wymiary: 20x15x25 cm',
-						'Otwór: 32mm średnicy',
-						'Impregnacja ekologiczna',
-						'Dach dwuspadowy',
-						'Mocowanie na drzewo/słup',
-						'Czyszczenie: wyjmowana podstawa',
-						'Wentylacja: otwory boczne',
-					],
 					features: [
 						'Wykonane z naturalnego, nielakierowanego drewna',
 						'Trwałe i odporne na warunki zewnętrzne',
@@ -61,13 +51,8 @@ export default function WorkshopPage() {
 						'Łatwe w montażu i czyszczeniu',
 						'Dostępne różne modele – dla sikorek, wróbli, muchołówek i innych ptaków',
 					],
-					technicalDetails: {
-						'Grubość ścianek': '12mm',
-						'Rodzaj drewna': 'Sosna skandynawska',
-						Impregnacja: 'Olej lniany',
-						Waga: '0.8 kg',
-						Gwarancja: '24 miesiące',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 				{
 					id: 2,
@@ -81,16 +66,6 @@ export default function WorkshopPage() {
 						'/pracownie/stolarnia/kwietnik/product1.jpg',
 						'/pracownie/stolarnia/kwietnik/product2.jpg',
 					],
-					specifications: [
-						'Materiał: drewno sosnowe i brzozowe',
-						'Wymiary: 45x25x20 cm',
-						'3 pojemniki na rośliny',
-						'Koła ruchome',
-						'Impregnacja naturalna',
-						'Uchwyty do przenoszenia',
-						'Odpływ wody w pojemnikach',
-						'Mobilna konstrukcja',
-					],
 					features: [
 						'Ozdobna forma mini wozu z miejscem na kwiaty',
 						'Ręczne wykonanie z drewna',
@@ -98,14 +73,8 @@ export default function WorkshopPage() {
 						'Stylowy dodatek do ogrodu, balkonu lub wnętrza',
 						'Idealny na prezent dla miłośników roślin i rękodzieła',
 					],
-					technicalDetails: {
-						'Pojemność pojemników': '1.2L każdy',
-						'Średnica kół': '12cm',
-						'Rodzaj drewna': 'Sosna + brzoza',
-						Wykończenie: 'Olej naturalny',
-						Waga: '2.1 kg',
-						Gwarancja: '18 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 				{
 					id: 3,
@@ -121,16 +90,6 @@ export default function WorkshopPage() {
 						'/pracownie/stolarnia/hotele/product3.jpg',
 						'/pracownie/stolarnia/hotele/product4.jpg',
 					],
-					specifications: [
-						'Materiał: drewno naturalne',
-						'Wymiary: 30x20x35 cm',
-						'Różne komory dla owadów',
-						'Bambus, drewno, szyszki',
-						'Dach ochronny',
-						'Zawieszka stalowa',
-						'Wentylacja naturalna',
-						'Materiały ekologiczne',
-					],
 					features: [
 						'Ręczne wykonanie z drewna i naturalnych wypełnień',
 						'Różne wielkości i układy – dopasowane do przestrzeni',
@@ -138,14 +97,8 @@ export default function WorkshopPage() {
 						'Wspiera bioróżnorodność i naturalne zapylanie roślin',
 						'Gotowy do zawieszenia lub ustawienia',
 					],
-					technicalDetails: {
-						'Ilość komór': '8-12',
-						'Rodzaj drewna': 'Sosna + dąb',
-						Wypełnienie: 'Bambus, słoma, szyszki',
-						Dach: 'Gont drewniany',
-						Waga: '1.8 kg',
-						Gwarancja: '36 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -163,16 +116,6 @@ export default function WorkshopPage() {
 						'/pracownie/stolarnia/doniczki/product4.jpg',
 						'/pracownie/stolarnia/doniczki/product5.jpg',
 					],
-					specifications: [
-						'Materiał: drewno sosnowe',
-						'Wymiary: 20x15x25 cm',
-						'Otwór: 32mm średnicy',
-						'Impregnacja ekologiczna',
-						'Dach dwuspadowy',
-						'Mocowanie na drzewo/słup',
-						'Czyszczenie: wyjmowana podstawa',
-						'Wentylacja: otwory boczne',
-					],
 					features: [
 						'Naturalne drewno – trwałe i estetyczne',
 						'Ręczne wykonanie i staranne wykończenie',
@@ -180,13 +123,8 @@ export default function WorkshopPage() {
 						'Idealne do domu, na balkon, taras i do ogrodu',
 						'Możliwość zamówień indywidualnych',
 					],
-					technicalDetails: {
-						'Grubość ścianek': '12mm',
-						'Rodzaj drewna': 'Sosna skandynawska',
-						Impregnacja: 'Olej lniany',
-						Waga: '0.8 kg',
-						Gwarancja: '24 miesiące',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -202,16 +140,6 @@ export default function WorkshopPage() {
 						'/pracownie/stolarnia/karmniki/product2.jpg',
 						'/pracownie/stolarnia/karmniki/product3.jpg',
 					],
-					specifications: [
-						'Materiał: drewno sosnowe',
-						'Wymiary: 20x15x25 cm',
-						'Otwór: 32mm średnicy',
-						'Impregnacja ekologiczna',
-						'Dach dwuspadowy',
-						'Mocowanie na drzewo/słup',
-						'Czyszczenie: wyjmowana podstawa',
-						'Wentylacja: otwory boczne',
-					],
 					features: [
 						'Ręczne wykonanie z naturalnego drewna',
 						'Trwała i stabilna konstrukcja',
@@ -219,13 +147,8 @@ export default function WorkshopPage() {
 						'Możliwość zawieszenia lub postawienia',
 						'Estetyczny dodatek do ogrodu, balkonu lub działki',
 					],
-					technicalDetails: {
-						'Grubość ścianek': '12mm',
-						'Rodzaj drewna': 'Sosna skandynawska',
-						Impregnacja: 'Olej lniany',
-						Waga: '0.8 kg',
-						Gwarancja: '24 miesiące',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 			],
 			team: {
@@ -277,24 +200,20 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/koszyk/product2.jpg',
 						'/pracownie/rękodzieło/koszyk/product3.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: ['Wysokiej jakości sznurek', 'Rękodzieło – każdy egzemplarz jest unikatowy', 'Stylowy i praktyczny dodatek do wnętrza'],
+					specifications: [
+						'Sznurki posiadają certyfikat OEKO-TEX w klasie 1, co oznacza, że są bezpieczne dla skóry, nawet dla dzieci.',
+						'Oferowane są w różnych grubościach, aby dopasować się do potrzeb każdego projektu, np. 3mm do delikatnych prac, 5mm do średnich, 8mm SOFT do miękkich projektów i 9mm do dużych makram.',
+						'Sznurki Outlet nadają się do tworzenia koszyków, toreb, ozdób, dekoracji ściennych, biżuterii, a nawet odzieży.',
+						'Charakterystyczną cechą sznurków z Outletu są drobne supełki, które pojawiają się na długości sznurka. Nie wpływają one na jakość ani funkcjonalność, ale stanowią powód obniżonej ceny.',
+						'Sznurki są polskim produktem.',
+						'Sznurki bawełniane są ekologiczne, a proces produkcji jest przyjazny dla środowiska.',
+						'Certyfikat OEKO-TEX potwierdza bezpieczeństwo sznurków dla użytkowników.',
+						'Mimo drobnych supełków, sznurki charakteryzują się dobrą jakością i trwałością',
+					],
 					technicalDetails: {
 						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
 						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
 					},
 				},
 
@@ -313,16 +232,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/legowisko/product4.jpg',
 						'/pracownie/rękodzieło/legowisko/product5.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek + drewno',
-						'Wymiary: 50x40x15 cm',
-						'Wykończenie naturalne',
-						'Poduszka wyjmowana',
-						'Antypoślizgowa podstawa',
-						'Dla psów do 20kg',
-						'Odporna na zarysowania',
-						'Łatwe składanie',
-					],
 					features: [
 						'Ręczne wykonanie z dbałością o każdy detal',
 						'Stabilne i miękkie zarazem – idealne miejsce do wypoczynku',
@@ -330,13 +239,19 @@ export default function WorkshopPage() {
 						'Bezpieczne i przyjazne dla zwierząt',
 						'Łatwe do utrzymania w czystości',
 					],
+					specifications: [
+						'Sznurki posiadają certyfikat OEKO-TEX w klasie 1, co oznacza, że są bezpieczne dla skóry, nawet dla dzieci.',
+						'Oferowane są w różnych grubościach, aby dopasować się do potrzeb każdego projektu, np. 3mm do delikatnych prac, 5mm do średnich, 8mm SOFT do miękkich projektów i 9mm do dużych makram.',
+						'Sznurki Outlet nadają się do tworzenia koszyków, toreb, ozdób, dekoracji ściennych, biżuterii, a nawet odzieży.',
+						'Charakterystyczną cechą sznurków z Outletu są drobne supełki, które pojawiają się na długości sznurka. Nie wpływają one na jakość ani funkcjonalność, ale stanowią powód obniżonej ceny.',
+						'Sznurki są polskim produktem.',
+						'Sznurki bawełniane są ekologiczne, a proces produkcji jest przyjazny dla środowiska.',
+						'Certyfikat OEKO-TEX potwierdza bezpieczeństwo sznurków dla użytkowników.',
+						'Mimo drobnych supełków, sznurki charakteryzują się dobrą jakością i trwałością',
+					],
 					technicalDetails: {
-						Rama: 'Drewno sosnowe',
-						Wypełnienie: 'Pianka poliuretanowa',
-						Pokrycie: 'Sznurek bawełniany',
-						Antypoślizg: 'Podkładki gumowe',
-						Waga: '3.2 kg',
-						Gwarancja: '24 miesiące',
+						'Grubość sznurka': '5mm',
+						Materiał: '100% bawełna',
 					},
 				},
 
@@ -361,16 +276,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/stroik/product10.jpg',
 						'/pracownie/rękodzieło/stroik/product11.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Ręczne wykonanie – każdy egzemplarz jest unikatowy',
 						'Trwałe, ozdobne elementy: kwiaty, liście, dodatki',
@@ -378,14 +283,8 @@ export default function WorkshopPage() {
 						'Gotowy do wyeksponowania – nie wymaga dodatkowej oprawy',
 						'Dostępne różne kompozycje i układy – każda z nich wyjątkowa',
 					],
-					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -403,16 +302,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/bransoletka/product4.jpg',
 						'/pracownie/rękodzieło/bransoletka/product5.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Rękodzieło – każda bransoletka jest unikalna',
 						'Wykonana z koralików w różnych kolorach i kształtach',
@@ -420,14 +309,8 @@ export default function WorkshopPage() {
 						'Lekka, wygodna i idealna na każdą okazję',
 						'Często wzbogacona o ozdobne zawieszki lub detale',
 					],
-					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -445,29 +328,25 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/podstawka/product4.jpg',
 						'/pracownie/rękodzieło/podstawka/product5.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Ręczne wykonanie',
 						'Uniwersalny design pasujący do każdego wnętrza',
 						'Ozdobna metka z logo',
 						'Idealna na prezent lub jako uzupełnienie innych produktów z tej samej serii',
 					],
+					specifications: [
+						'Sznurki posiadają certyfikat OEKO-TEX w klasie 1, co oznacza, że są bezpieczne dla skóry, nawet dla dzieci.',
+						'Oferowane są w różnych grubościach, aby dopasować się do potrzeb każdego projektu, np. 3mm do delikatnych prac, 5mm do średnich, 8mm SOFT do miękkich projektów i 9mm do dużych makram.',
+						'Sznurki Outlet nadają się do tworzenia koszyków, toreb, ozdób, dekoracji ściennych, biżuterii, a nawet odzieży.',
+						'Charakterystyczną cechą sznurków z Outletu są drobne supełki, które pojawiają się na długości sznurka. Nie wpływają one na jakość ani funkcjonalność, ale stanowią powód obniżonej ceny.',
+						'Sznurki są polskim produktem.',
+						'Sznurki bawełniane są ekologiczne, a proces produkcji jest przyjazny dla środowiska.',
+						'Certyfikat OEKO-TEX potwierdza bezpieczeństwo sznurków dla użytkowników.',
+						'Mimo drobnych supełków, sznurki charakteryzują się dobrą jakością i trwałością',
+					],
 					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
+						'Grubość sznurka': '5mm',
+						Materiał: '100% bawełna',
 					},
 				},
 
@@ -501,16 +380,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/kartki/product19.jpg',
 						'/pracownie/rękodzieło/kartki/product20.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Ręczne wykonanie – każda kartka jest unikatowa',
 						'Starannie dobrane ozdoby: sklejka, kwiatki, wycinane elementy',
@@ -518,14 +387,8 @@ export default function WorkshopPage() {
 						'Miejsce na własne życzenia w środku',
 						'Możliwość dopasowania do okazji lub personalizacji (na życzenie)',
 					],
-					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -545,16 +408,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/koszyk_uszy/product6.jpg',
 						'/pracownie/rękodzieło/koszyk_uszy/product7.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Ręczne wykonanie – każdy egzemplarz to unikat',
 						'Wygodne uchwyty ułatwiające przenoszenie',
@@ -562,13 +415,19 @@ export default function WorkshopPage() {
 						'Idealny do łazienki, salonu, kuchni czy pokoju dziecięcego',
 						'Możliwość zestawienia z innymi produktami z tej samej serii',
 					],
+					specifications: [
+						'Sznurki posiadają certyfikat OEKO-TEX w klasie 1, co oznacza, że są bezpieczne dla skóry, nawet dla dzieci.',
+						'Oferowane są w różnych grubościach, aby dopasować się do potrzeb każdego projektu, np. 3mm do delikatnych prac, 5mm do średnich, 8mm SOFT do miękkich projektów i 9mm do dużych makram.',
+						'Sznurki Outlet nadają się do tworzenia koszyków, toreb, ozdób, dekoracji ściennych, biżuterii, a nawet odzieży.',
+						'Charakterystyczną cechą sznurków z Outletu są drobne supełki, które pojawiają się na długości sznurka. Nie wpływają one na jakość ani funkcjonalność, ale stanowią powód obniżonej ceny.',
+						'Sznurki są polskim produktem.',
+						'Sznurki bawełniane są ekologiczne, a proces produkcji jest przyjazny dla środowiska.',
+						'Certyfikat OEKO-TEX potwierdza bezpieczeństwo sznurków dla użytkowników.',
+						'Mimo drobnych supełków, sznurki charakteryzują się dobrą jakością i trwałością',
+					],
 					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
+						'Grubość sznurka': '5mm',
+						Materiał: '100% bawełna',
 					},
 				},
 
@@ -580,16 +439,6 @@ export default function WorkshopPage() {
 					shortDescription: 'Elegancki stroik na każdą okazję',
 					category: 'Dekoracje',
 					images: ['/pracownie/rękodzieło/kwietnik/main.jpg', '/pracownie/rękodzieło/kwietnik/product1.jpg'],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Ręczne wykonanie ze starannością i dbałością o detal',
 						'Stylowy i praktyczny dodatek do wnętrza',
@@ -597,13 +446,19 @@ export default function WorkshopPage() {
 						'Uniwersalny wygląd – pasuje do różnych aranżacji',
 						'Możliwość zestawienia z innymi produktami z tej samej serii',
 					],
+					specifications: [
+						'Sznurki posiadają certyfikat OEKO-TEX w klasie 1, co oznacza, że są bezpieczne dla skóry, nawet dla dzieci.',
+						'Oferowane są w różnych grubościach, aby dopasować się do potrzeb każdego projektu, np. 3mm do delikatnych prac, 5mm do średnich, 8mm SOFT do miękkich projektów i 9mm do dużych makram.',
+						'Sznurki Outlet nadają się do tworzenia koszyków, toreb, ozdób, dekoracji ściennych, biżuterii, a nawet odzieży.',
+						'Charakterystyczną cechą sznurków z Outletu są drobne supełki, które pojawiają się na długości sznurka. Nie wpływają one na jakość ani funkcjonalność, ale stanowią powód obniżonej ceny.',
+						'Sznurki są polskim produktem.',
+						'Sznurki bawełniane są ekologiczne, a proces produkcji jest przyjazny dla środowiska.',
+						'Certyfikat OEKO-TEX potwierdza bezpieczeństwo sznurków dla użytkowników.',
+						'Mimo drobnych supełków, sznurki charakteryzują się dobrą jakością i trwałością',
+					],
 					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
+						'Grubość sznurka': '5mm',
+						Materiał: '100% bawełna',
 					},
 				},
 
@@ -620,24 +475,20 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/koszyk2/product2.jpg',
 						'/pracownie/rękodzieło/koszyk2/product3.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: ['Wysokiej jakości sznurek', 'Rękodzieło – każdy egzemplarz jest unikatowy', 'Stylowy i praktyczny dodatek do wnętrza'],
+					specifications: [
+						'Sznurki posiadają certyfikat OEKO-TEX w klasie 1, co oznacza, że są bezpieczne dla skóry, nawet dla dzieci.',
+						'Oferowane są w różnych grubościach, aby dopasować się do potrzeb każdego projektu, np. 3mm do delikatnych prac, 5mm do średnich, 8mm SOFT do miękkich projektów i 9mm do dużych makram.',
+						'Sznurki Outlet nadają się do tworzenia koszyków, toreb, ozdób, dekoracji ściennych, biżuterii, a nawet odzieży.',
+						'Charakterystyczną cechą sznurków z Outletu są drobne supełki, które pojawiają się na długości sznurka. Nie wpływają one na jakość ani funkcjonalność, ale stanowią powód obniżonej ceny.',
+						'Sznurki są polskim produktem.',
+						'Sznurki bawełniane są ekologiczne, a proces produkcji jest przyjazny dla środowiska.',
+						'Certyfikat OEKO-TEX potwierdza bezpieczeństwo sznurków dla użytkowników.',
+						'Mimo drobnych supełków, sznurki charakteryzują się dobrą jakością i trwałością',
+					],
 					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
+						'Grubość sznurka': '5mm',
+						Materiał: '100% bawełna',
 					},
 				},
 
@@ -654,30 +505,14 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/podkladki/product2.jpg',
 						'/pracownie/rękodzieło/podkladki/product3.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: [
 						'Zestaw zawiera: 6 sztuk podkładek + drewniane pudełko',
 						'Materiał: naturalna sklejka',
 						'Technika zdobienia: laserowe cięcie + ręczne malowanie farbami akrylowymi',
 						'Motyw: kwiatowy, inspirowany naturą',
 					],
-					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 			],
 			team: {
@@ -720,16 +555,6 @@ export default function WorkshopPage() {
 						'/pracownie/szwalnia/legowisko/product4.jpg',
 						'/pracownie/szwalnia/legowisko/product5.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: [
 						'Wygodne i miękkie – idealne do spania i odpoczynku',
 						'Wykonane z trwałych i przyjemnych w dotyku materiałów',
@@ -737,14 +562,8 @@ export default function WorkshopPage() {
 						'Stylowy wygląd – pasuje do każdego wnętrza',
 						'Pokrowce łatwe do czyszczenia lub prania',
 					],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -766,16 +585,6 @@ export default function WorkshopPage() {
 						'/pracownie/szwalnia/poduszki/product8.jpg',
 						'/pracownie/szwalnia/poduszki/product9.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: [
 						'Różnorodne tkaniny – od gładkich po strukturalne',
 						'Starannie szyte, z dbałością o detale',
@@ -783,14 +592,8 @@ export default function WorkshopPage() {
 						'Bogaty wybór wzorów i kolorów',
 						'Idealne jako ozdoba i do codziennego użytku',
 					],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -810,16 +613,6 @@ export default function WorkshopPage() {
 						'/pracownie/szwalnia/torba/product6.jpg',
 						'/pracownie/szwalnia/torba/product7.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: [
 						'Materiał: 100% bawełna',
 						'Mieści standardową butelkę 0,75 l',
@@ -827,14 +620,8 @@ export default function WorkshopPage() {
 						'Trwała i wielorazowego użytku',
 						'Naturalny kolor – baza do personalizacji',
 					],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -852,25 +639,9 @@ export default function WorkshopPage() {
 						'/pracownie/szwalnia/torebka/product4.jpg',
 						'/pracownie/szwalnia/torebka/product5.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: ['Lekka', 'Stylowa', 'Praktyczna'],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 			],
 			team: {
@@ -915,16 +686,6 @@ export default function WorkshopPage() {
 						'/pracownie/informatyka/pudelko/product5.jpg',
 						'/pracownie/informatyka/pudelko/product6.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: [
 						'Wykonane z wysokiej jakości sklejki brzozowej (3 mm)',
 						'Elementy cięte i grawerowane laserowo – precyzyjnie i estetycznie',
@@ -933,14 +694,8 @@ export default function WorkshopPage() {
 						'Mieści standardową butelkę wina (lub innego alkoholu)',
 						'Wysyłane w całości złożone lub rozkładane (w zależności od wersji)',
 					],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 
 				{
@@ -962,16 +717,6 @@ export default function WorkshopPage() {
 						'/pracownie/informatyka/wycinanie/product8.jpg',
 						'/pracownie/informatyka/wycinanie/product9.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek + drewno',
-						'Wymiary: 50x40x15 cm',
-						'Wykończenie naturalne',
-						'Poduszka wyjmowana',
-						'Antypoślizgowa podstawa',
-						'Dla psów do 20kg',
-						'Odporna na zarysowania',
-						'Łatwe składanie',
-					],
 					features: [
 						'Elementy dekoracyjne i użytkowe ze sklejki, drewna, akrylu itp.',
 						'Personalizowane pudełka i opakowania',
@@ -979,14 +724,8 @@ export default function WorkshopPage() {
 						'Współpraca przy projektach indywidualnych i hurtowych',
 						'Doradztwo w zakresie materiałów i konstrukcji',
 					],
-					technicalDetails: {
-						Rama: 'Drewno sosnowe',
-						Wypełnienie: 'Pianka poliuretanowa',
-						Pokrycie: 'Sznurek bawełniany',
-						Antypoślizg: 'Podkładki gumowe',
-						Waga: '3.2 kg',
-						Gwarancja: '24 miesiące',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 			],
 			team: {
@@ -1029,16 +768,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/product1-4.jpg',
 						'/pracownie/rękodzieło/product1-5.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: [
 						'Ręczne wykonanie',
 						'Materiał naturalny',
@@ -1047,14 +776,8 @@ export default function WorkshopPage() {
 						'Łatwe czyszczenie',
 						'Stylowy design',
 					],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 				{
 					id: 5,
@@ -1069,16 +792,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/product2-3.jpg',
 						'/pracownie/rękodzieło/product2-4.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek + drewno',
-						'Wymiary: 50x40x15 cm',
-						'Wykończenie naturalne',
-						'Poduszka wyjmowana',
-						'Antypoślizgowa podstawa',
-						'Dla psów do 20kg',
-						'Odporna na zarysowania',
-						'Łatwe składanie',
-					],
 					features: [
 						'Naturalne materiały',
 						'Komfort zwierzęcia',
@@ -1087,14 +800,8 @@ export default function WorkshopPage() {
 						'Stylowy design',
 						'Wyjmowana poduszka',
 					],
-					technicalDetails: {
-						Rama: 'Drewno sosnowe',
-						Wypełnienie: 'Pianka poliuretanowa',
-						Pokrycie: 'Sznurek bawełniany',
-						Antypoślizg: 'Podkładki gumowe',
-						Waga: '3.2 kg',
-						Gwarancja: '24 miesiące',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 				{
 					id: 6,
@@ -1110,25 +817,9 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/product3-4.jpg',
 						'/pracownie/rękodzieło/product3-5.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: ['Ręczna kompozycja', 'Sezonowe motywy', 'Naturalne składniki', 'Wyjątkowy design', 'Długa trwałość', 'Gotowy prezent'],
-					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 			],
 			team: {
@@ -1171,16 +862,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/product1-4.jpg',
 						'/pracownie/rękodzieło/product1-5.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek bawełniany',
-						'Wymiary: 35x25x20 cm',
-						'Plecenie ręczne',
-						'Uchwyty wzmocnione',
-						'Kolor naturalny',
-						'Waga: 0.8 kg',
-						'Możliwość prania ręcznego',
-						'Antyalergiczny materiał',
-					],
 					features: [
 						'Ręczne wykonanie',
 						'Materiał naturalny',
@@ -1189,14 +870,8 @@ export default function WorkshopPage() {
 						'Łatwe czyszczenie',
 						'Stylowy design',
 					],
-					technicalDetails: {
-						'Grubość sznurka': '5mm',
-						'Rodzaj splotu': 'Spiralny',
-						Materiał: '100% bawełna',
-						Wytrzymałość: 'do 5kg',
-						Pielęgnacja: 'Pranie ręczne 30°C',
-						Gwarancja: '12 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 				{
 					id: 5,
@@ -1211,16 +886,6 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/product2-3.jpg',
 						'/pracownie/rękodzieło/product2-4.jpg',
 					],
-					specifications: [
-						'Materiał: sznurek + drewno',
-						'Wymiary: 50x40x15 cm',
-						'Wykończenie naturalne',
-						'Poduszka wyjmowana',
-						'Antypoślizgowa podstawa',
-						'Dla psów do 20kg',
-						'Odporna na zarysowania',
-						'Łatwe składanie',
-					],
 					features: [
 						'Naturalne materiały',
 						'Komfort zwierzęcia',
@@ -1229,14 +894,8 @@ export default function WorkshopPage() {
 						'Stylowy design',
 						'Wyjmowana poduszka',
 					],
-					technicalDetails: {
-						Rama: 'Drewno sosnowe',
-						Wypełnienie: 'Pianka poliuretanowa',
-						Pokrycie: 'Sznurek bawełniany',
-						Antypoślizg: 'Podkładki gumowe',
-						Waga: '3.2 kg',
-						Gwarancja: '24 miesiące',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 				{
 					id: 6,
@@ -1252,25 +911,9 @@ export default function WorkshopPage() {
 						'/pracownie/rękodzieło/product3-4.jpg',
 						'/pracownie/rękodzieło/product3-5.jpg',
 					],
-					specifications: [
-						'Materiał: naturalne elementy',
-						'Wymiary: 30x30x10 cm',
-						'Komponenty sezonowe',
-						'Wykonanie ręczne',
-						'Podstawa wiklinowa',
-						'Trwałość: 6 miesięcy',
-						'Możliwość personalizacji',
-						'Opakowanie prezentowe',
-					],
 					features: ['Ręczna kompozycja', 'Sezonowe motywy', 'Naturalne składniki', 'Wyjątkowy design', 'Długa trwałość', 'Gotowy prezent'],
-					technicalDetails: {
-						Podstawa: 'Wiklina naturalna',
-						Elementy: 'Suszone kwiaty, gałązki',
-						Spoiwo: 'Klej roślinny',
-						Konserwacja: 'Lakier naturalny',
-						Waga: '0.6 kg',
-						Gwarancja: '6 miesięcy',
-					},
+					specifications: null,
+					technicalDetails: null,
 				},
 			],
 			team: {
@@ -1737,15 +1380,19 @@ export default function WorkshopPage() {
 										>
 											Cechy
 										</button>
-										{/* <button className={`${styles.tabButton} ${activeTab === 'specs' ? styles.active : ''}`} onClick={() => handleTabClick('specs')}>
-											Specyfikacja
-										</button>
-										<button
-											className={`${styles.tabButton} ${activeTab === 'technical' ? styles.active : ''}`}
-											onClick={() => handleTabClick('technical')}
-										>
-											Dane techniczne
-										</button> */}
+										{selectedProduct.specifications && (
+											<button className={`${styles.tabButton} ${activeTab === 'specs' ? styles.active : ''}`} onClick={() => handleTabClick('specs')}>
+												Specyfikacja
+											</button>
+										)}
+										{selectedProduct.technicalDetails && (
+											<button
+												className={`${styles.tabButton} ${activeTab === 'technical' ? styles.active : ''}`}
+												onClick={() => handleTabClick('technical')}
+											>
+												Dane techniczne
+											</button>
+										)}
 									</div>
 
 									<div className={styles.tabContent}>
@@ -1764,7 +1411,7 @@ export default function WorkshopPage() {
 											</div>
 										)}
 
-										{/* {activeTab === 'specs' && (
+										{selectedProduct.specifications && activeTab === 'specs' && (
 											<div className={styles.tabPanel}>
 												<div className={styles.specsList}>
 													{selectedProduct.specifications.map((spec, index) => (
@@ -1776,7 +1423,7 @@ export default function WorkshopPage() {
 											</div>
 										)}
 
-										{activeTab === 'technical' && (
+										{selectedProduct.technicalDetails && activeTab === 'technical' && (
 											<div className={styles.tabPanel}>
 												<div className={styles.technicalList}>
 													{Object.entries(selectedProduct.technicalDetails).map(([key, value], index) => (
@@ -1787,7 +1434,7 @@ export default function WorkshopPage() {
 													))}
 												</div>
 											</div>
-										)} */}
+										)}
 									</div>
 								</div>
 

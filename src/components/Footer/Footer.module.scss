@@ -9,7 +9,6 @@ $transition: all 0.3s ease;
 	position: relative;
 	overflow: hidden;
 
-	// Subtelne elementy dekoracyjne
 	&::before {
 		content: '';
 		position: absolute;
@@ -64,24 +63,21 @@ $transition: all 0.3s ease;
 	}
 }
 
-// Logo section
 .logo {
 	display: flex;
 	align-items: center;
 	gap: 12px;
 	margin-bottom: 24px;
-	height: 50px; // Stała wysokość dla logo
+	height: 50px;
 }
 
-// Logo image container
 .logoImage {
 	height: 50px;
 	width: auto;
 	object-fit: contain;
-	filter: brightness(0) invert(1); // Makes logo white
+	filter: brightness(0) invert(1);
 }
 
-// Fallback text logo (if no image)
 .textLogo {
 	display: flex;
 	align-items: center;
@@ -135,7 +131,21 @@ $transition: all 0.3s ease;
 	}
 }
 
-// Column titles
+.companyInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 24px;
+	padding-top: 24px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.companyItem {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 400;
+}
+
 .columnTitle {
 	font-size: 20px;
 	font-weight: 700;
@@ -157,7 +167,6 @@ $transition: all 0.3s ease;
 	}
 }
 
-// Links
 .linksList {
 	list-style: none;
 	padding: 0;
@@ -205,7 +214,6 @@ $transition: all 0.3s ease;
 	gap: 12px;
 }
 
-// Hours section
 .hours {
 	display: flex;
 	flex-direction: column;
@@ -236,7 +244,6 @@ $transition: all 0.3s ease;
 	}
 }
 
-// Social links
 .social {
 	display: flex;
 	gap: 16px;
@@ -283,7 +290,6 @@ $transition: all 0.3s ease;
 	}
 }
 
-// Bottom section
 .bottom {
 	padding: 32px 0;
 }
@@ -305,6 +311,7 @@ $transition: all 0.3s ease;
 .bottomLinks {
 	display: flex;
 	gap: 32px;
+	align-items: center;
 }
 
 .bottomLink {
@@ -315,6 +322,22 @@ $transition: all 0.3s ease;
 
 	&:hover {
 		color: white;
+	}
+}
+
+.designedBy {
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 16px;
+
+	a {
+		color: #3b82f6;
+		text-decoration: none;
+		transition: $transition;
+
+		&:hover {
+			color: #60a5fa;
+		}
 	}
 }
 
